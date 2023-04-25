@@ -76,10 +76,10 @@ function Home() {
                 title="26/02/2003"
                 subtitle="Birthday"/>
 
-              <Link className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel' to={'/downloads/cv'}>
+              <a href={''} className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
                 <UserPlus className='text-2xl m-4'/>
                 <p className='m-4 ml-0'>DOWNLOAD MY VCARD</p>
-              </Link>
+              </a>
 
             </div>
 

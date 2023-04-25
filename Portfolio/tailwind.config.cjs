@@ -65,6 +65,10 @@ module.exports = {
         '3xl': '1920px',
         // => @media (min-width: 1920px) { ... }
       },
+      maxWidth: {
+        '1/2': '50%',
+        '8xl': '90rem',
+      },
     },
   },
   plugins: [],
