@@ -9,6 +9,7 @@ import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
 import ContactInfo from '../components/ContactInfo';
 import EducationInfo from '../components/EducationInfo';
 import Title from '../components/Title';
+import Vcard from '../assets/vcf/Tibomessiaen.vcf';
 
 function Home() {
 
@@ -76,7 +77,7 @@ function Home() {
                 title="26/02/2003"
                 subtitle="Birthday"/>
 
-              <a href={''} className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
+              <a href={'../assets/vcf/Tibomessiaen.vcf'} download className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
                 <UserPlus className='text-2xl m-4'/>
                 <p className='m-4 ml-0'>DOWNLOAD MY VCARD</p>
               </a>
