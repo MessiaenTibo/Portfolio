@@ -6,9 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      margin:{
-        '18' : '4.45rem',
-        '26' : '6.5rem',
+      margin: {
+        '18': '4.45rem',
+        '26': '6.5rem',
         '2/5': '40%',
       },
       borderWidth: {
@@ -20,7 +20,8 @@ module.exports = {
         '8': '8px',
       },
       spacing: {
-        '22' : '5.5rem',
+        '20': '5rem',
+        '22': '5.5rem',
         '100': '25rem',
         '128': '32rem',
         '144': '36rem',
@@ -45,22 +46,22 @@ module.exports = {
       screens: {
         'xsm': '480px',
         // => @media (min-width: 480px) { ... }
-  
+
         'sm': '640px',
         // => @media (min-width: 640px) { ... }
-  
+
         'md': '768px',
         // => @media (min-width: 768px) { ... }
-  
+
         'lg': '1024px',
         // => @media (min-width: 1024px) { ... }
-  
+
         'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
-  
+
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
-  
+
         '3xl': '1920px',
         // => @media (min-width: 1920px) { ... }
       },

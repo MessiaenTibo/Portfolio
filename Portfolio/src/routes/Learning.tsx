@@ -25,9 +25,9 @@ function Learning() {
           <LearningCard side='left' title='Spotify App' subtitle='C#, Xamarin' content='We had our first app to create. And I choose to recreate the spotify app with the official spotify api for developers. The app has a 2.O authentication to log you in and get all your spotify playlists and songs. You can even create, update en delete all your spotify playlist. you just cant listen to any songs in the app.'/>
           
           <SeperatorLine year="2023"/>
-          <LearningCard side='right' title='2MCT' subtitle='C#, Azure, Docker, Dapr' content=''/>
+          <LearningCard side='right' title='2MCT' subtitle='C#, Azure, Docker, Dapr' content='We learned a more modern way of making api routes in the module BACKEND. We also saw the basic aspects of docker so we could publish a docker image to azure. This made our api routes publicaly available.'/>
           <LearningCard side='left' title='2MCT' subtitle='HTML, CSS, Javascript, Typescript, Tailwind, React' content='This portfolio website you are looking at right now'/>
-          <LearningCard side='right' title='2MCT' subtitle='React Native, TypeScript' content='I created a DartCounter app in react native. I like the dart in my free time and this project was my opportunity to create my own version of a dart app, completely to my likings.'/>
+          <LearningCard side='right' title='2MCT' subtitle='React Native, TypeScript' content='I created a DartCounter app in react native. I like to dart in my free time and this project was my opportunity to create my own version of a dart app, completely to my likings.'/>
           
           <SeperatorLine year="NOW"/>
         </div>
