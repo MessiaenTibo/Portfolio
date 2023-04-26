@@ -9,7 +9,6 @@ import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
 import ContactInfo from '../components/ContactInfo';
 import EducationInfo from '../components/EducationInfo';
 import Title from '../components/Title';
-import Vcard from '../assets/vcf/Tibomessiaen.vcf';
 
 function Home() {
 
@@ -38,20 +37,20 @@ function Home() {
             </div>
 
             <div className='flex justify-evenly text-white p-4'>
-              <div className='w-full'>
-                <Phone className='fill-white stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p>Call</p>
-              </div>
+              <a href='tel:+32471620982' className='w-full group/Phone'>
+                <Phone className='fill-white group-hover/Phone:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
+                <p className='group-hover/Phone:text-orange-peel'>Call</p>
+              </a>
 
-              <div className='border-x w-full'>
-                <Send className='fill-white stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p>Email</p>
-              </div>
+              <a href='mailto:tibomessiaen@gmail.com' className='border-x w-full group/Email'>
+                <Send className='fill-white group-hover/Email:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
+                <p className='group-hover/Email:text-orange-peel'>Email</p>
+              </a>
 
-              <div className='w-full'>
-                <Linkedin className='fill-white stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p>linked-in</p>
-              </div>
+              <a href='https://www.linkedin.com/in/tibo-messiaen/' className='w-full group/Linkedin' target='_blank'>
+                <Linkedin className='fill-white group-hover/Linkedin:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
+                <p className='group-hover/Linkedin:text-orange-peel'>linked-in</p>
+              </a>
 
             </div>
 
@@ -77,7 +76,7 @@ function Home() {
                 title="26/02/2003"
                 subtitle="Birthday"/>
 
-              <a href={'../assets/vcf/Tibomessiaen.vcf'} download className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
+              <a href="/Tibomessiaen.vcf" download className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
                 <UserPlus className='text-2xl m-4'/>
                 <p className='m-4 ml-0'>DOWNLOAD MY VCARD</p>
               </a>
