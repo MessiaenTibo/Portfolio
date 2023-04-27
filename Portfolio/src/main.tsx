@@ -31,10 +31,10 @@ const router = createBrowserRouter([
         path: 'projects',
         element: <Projects />
       },
-      // {
-      //   path: '*',
-      //   element:<Navigate to="/" replace />
-      // }
+      {
+        path: '*',
+        element:<Navigate to="/" replace />
+      }
     ]
   },
 ])
