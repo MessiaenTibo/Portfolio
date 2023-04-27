@@ -38,18 +38,17 @@ export default ({
   myImage.format('webp');
   myImage.delivery(Delivery.quality('auto'));
   return (
-    <div className={` p-4 ${color} ${divClass} `}>
-      <div className="bg-white">
+    <div className={` ${color} ${divClass} `}>
         <AdvancedImage
+        alt={alt}
         className="w-full"
           cldImg={myImage}
           plugins={[
             responsive({
-              steps: [250, 300, 350, 400, 450, 500, 550, 600, 650],
+              steps: [250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
             }),
           ]}
         />
-      </div>
     </div>
   );
 };
