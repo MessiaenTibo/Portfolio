@@ -12,11 +12,9 @@ import ProjectOneDemo from '../assets/videos/ProjectOneDemo.mp4'
 import Title from '../components/Title'
 import ProjectInfo from '../components/ProjectInfo'
 
-// import CloudinaryImage from '../components/CloudinaryImage'
+import CloudinaryImage from '../components/CloudinaryImage'
 
 import React, { Suspense } from 'react';
-
-const CloudinaryImage = React.lazy(() => import('../components/CloudinaryImage'));
 
 
 function Projects() {
