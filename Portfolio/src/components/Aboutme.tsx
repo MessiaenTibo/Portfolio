@@ -50,7 +50,7 @@ export default () => {
 
         <div className='lg:w-1/2 lg:p-4 w-full'>
           {/* <img src={AboutMe} alt="Image" className=' rounded-3xl shadow-xl'/> */}
-          <CloudinaryImage link='AboutMe_rhhb8j.png' alt='AboutMe' divClass='rounded-3xl shadow-xl w-full'/>
+          <CloudinaryImage link='AboutMe_rhhb8j.png' alt='AboutMe' imgClass='rounded-3xl shadow-xl w-full'/>
         </div>
       </div>
     </div>

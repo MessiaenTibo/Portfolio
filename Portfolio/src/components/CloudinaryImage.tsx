@@ -18,16 +18,12 @@ export default ({
   link,
   alt,
   divClass,
-  color = 'bg-royal-purple',
-  media3,
-  media5,
+  imgClass,
 }: {
   link: string;
   alt: string;
   divClass?: string;
-  color?: string;
-  media3?: number;
-  media5?: number;
+  imgClass?: string;
 }) => {
   const cld = new Cloudinary({
     cloud: {
@@ -38,10 +34,10 @@ export default ({
   myImage.format('webp');
   myImage.delivery(Delivery.quality('auto'));
   return (
-    <div className={` ${color} ${divClass} `}>
+    <div className={` ${divClass} `}>
         <AdvancedImage
         alt={alt}
-        className="w-full"
+        className={`w-full ${imgClass}`}
           cldImg={myImage}
           plugins={[
             responsive({
