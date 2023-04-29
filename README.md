@@ -38,7 +38,11 @@ If you just downloaded this repository.
     ```shell
     npm install lucide-react
     ```
-8) And run the project
+8) Install cloudinary
+    ```shell
+    npm install cloudinary
+    ```
+9) And run the project
     ```shell
     npm run dev
     ```
