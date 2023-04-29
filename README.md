@@ -4,6 +4,13 @@
 I am Messian Tibo, and this is my portfolio. This website is created to show all my created websites, games and desktop applications.
 To show the different things a learned as a programmer, in my free time and studying as a Next Web Developer at Howest kortrijk MCT (Multimedia and Creatif Technologies) https://mct.be.
 
+## What did I use?
+I used **React** to create this website. I used React because I wanted to learn more about it and I wanted to use it in my portfolio.
+I wrote all the code in **TypeScript**, the more strict version of JavaScript. I wrote the code in a **component based** way.
+**React router dom** is also used to navigate between the different pages.
+For styling I used **Tailwindcss**. I used Tailwindcss because its easy to use and it has a lot of different classes to use.
+
+
 ## How to run this project?
 If you just downloaded this repository.
 1) Open the terminal
