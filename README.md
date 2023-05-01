@@ -9,6 +9,7 @@ I used **React** to create this website. I used React because I wanted to learn 
 I wrote all the code in **TypeScript**, the more strict version of JavaScript. I wrote the code in a **component based** way.
 **React router dom** is also used to navigate between the different pages.
 For styling I used **Tailwindcss**. I used Tailwindcss because its easy to use and it has a lot of different classes to use.
+And for Icons I used **Lucid Icons**.
 
 
 ## How to run this project?
