@@ -32,6 +32,10 @@ const router = createBrowserRouter([
         element: <Projects />
       },
       {
+        path: 'robots.txt',
+        
+      },
+      {
         path: '*',
         element:<Navigate to="/" replace />
       }
