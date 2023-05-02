@@ -11,6 +11,8 @@ import Learning from './routes/Learning';
 import Projects from './routes/Projects';
 import Container from './components/Container';
 
+import robots from '/robots.txt'
+
 const router = createBrowserRouter([
   {
     element: <Container />,
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'robots.txt',
-        
+        element: robots
       },
       {
         path: '*',
