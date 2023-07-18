@@ -7,9 +7,11 @@ interface Props{
     technologies: {title:string, technologies:string[]}[];
     footnote?:string;
     footnoteLink?:ReactElement<HTMLAttributeAnchorTarget>;
+    footnoteTwo?:string;
+    footnoteLinkTwo?:ReactElement<HTMLAttributeAnchorTarget>;
 }
 
-export default ({title, paragraph, technologies, footnote, footnoteLink}:Props) => {
+export default ({title, paragraph, technologies, footnote, footnoteLink, footnoteTwo , footnoteLinkTwo}:Props) => {
     return (
         <div>
             <h1 className='text-2xl font-bold mb-4'>{title}</h1>
@@ -35,6 +37,7 @@ export default ({title, paragraph, technologies, footnote, footnoteLink}:Props) 
                 </div>
             </div>
             <p className="flex">{footnote}<p className='underline text-caribbean-current hover:text-orange-peel'>{footnoteLink}</p></p>
+            <p className="flex">{footnoteTwo}<p className='underline text-caribbean-current hover:text-orange-peel'>{footnoteLinkTwo}</p></p>
         </div>
     );
   };

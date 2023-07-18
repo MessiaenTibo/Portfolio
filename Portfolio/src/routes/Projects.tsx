@@ -23,9 +23,17 @@ function Projects() {
     <div className="Projects mx-4 md:mx-8 2xl:max-w-screen-2xl 2xl:m-auto">
       <Title title="Welcome"/>
 
+        <div className='flex flex-col md:gap-8  md:flex-row-reverse'>
+            <div className='flex items-center w-full pb-4 md:w-1/2 xl:p-12'>
+              <CloudinaryImage link="AxxesConferenceTool_jxi8d4.png" alt="Portfolio Mockup" divClass='w-full'/>
+            </div>
+            <div className='w-full pb-12 md:w-1/2 place-self-center xl:p-12'>
+              <ProjectInfo title="Industry project" paragraph={`Two classmates and I created this website as an Industry project. We got to work with the company Axxes, a IT consultancy. Axxes hosts a yearly conference for their employees, so that they can listen and learn from each other, and they wanted to digitalis this. So it was up to us to create a website, app and backend system, over the corse of 6 weeks.`} technologies={[{title:"Front-end", technologies:["React","HTML","Tailwindcss","Typescript"]},{title:"Back-end", technologies:["HTTP",".NET", "Firebase auth", "Bicep"]},{title:"Azure", technologies:["WebApp","KeyVault","BlobStorage","CosmosDB"]}]} footnote="Website:" footnoteLink={<a href="https://axxes-conference-tool.netlify.app/" target='_blank'>Axxes-Conference-Tool</a>} footnoteTwo='App:' footnoteLinkTwo={<a href="https://expo.dev/@tibomessiaen/Haxx?serviceType=classic&distribution=expo-go" target='_blank'>Expo dev QR-code</a>}/>
+            </div>
+        </div>
+
         <div className='flex flex-col md:flex-row md:gap-8'>
-            <div className='w-full pb-4 md:w-1/2 xl:p-12'>
-              {/* <img src="https://raw.githubusercontent.com/MessiaenTibo/Portfolio/main/Portfolio/src/assets/imgs/PortfolioMockup.png" alt="placeholder" className='w-full'/> */}
+            <div className='flex items-center w-full pb-4 md:w-1/2 xl:p-12'>
               <CloudinaryImage link="PortfolioMockup_qjs7ns.png" alt="Portfolio Mockup" divClass='w-full'/>
             </div>
             <div className='w-full pb-12 md:w-1/2 place-self-center xl:p-12'>
@@ -33,7 +41,7 @@ function Projects() {
             </div>
         </div>
 
-        <div className='flex flex-col md:flex-row md:gap-8 md:flex-row-reverse'>
+        <div className='flex flex-colmd:gap-8 md:flex-row-reverse'>
             <div className='flex w-full pb-4 md:w-1/2 xl:p-12'>
               <video title='1VS1' className='xl:w-1/2 p-2' src={TeamProject1vs1Demo} controls>Your browser does not support the video tag.</video>
               <video title='1VS1' className='hidden xl:flex w-1/2 p-2' src={TeamProjectShuttleRunDemo} controls>Your browser does not support the video tag.</video>
@@ -52,9 +60,8 @@ function Projects() {
             </div>
         </div>
 
-        <div className='flex flex-col md:flex-row md:gap-8 md:flex-row-reverse'>
-            <div className='w-full pb-4 md:w-1/2 xl:p-12'>
-              {/* <img src="https://raw.githubusercontent.com/MessiaenTibo/Portfolio/main/Portfolio/src/assets/imgs/Blackjack.png" alt="placeholder" className='w-full'/> */}
+        <div className='flex flex-col md:gap-8 md:flex-row-reverse'>
+            <div className='flex items-center w-full pb-4 md:w-1/2 xl:p-12'>
               <CloudinaryImage link="Blackjack_rbtyfa.png" alt="blackjack" divClass='w-full' />
             </div>
             <div className='w-full pb-12 md:w-1/2 place-self-center xl:p-12'>
