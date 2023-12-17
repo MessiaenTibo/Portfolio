@@ -26,21 +26,21 @@ export default () => {
             <div className='flex flex-wrap'>
             {/* <div className='xsm:inline-block'> */}
               <div className='flex items-center'>
-                <Code2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Code2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Code</h2>
               </div>
               <div className='flex items-center'>
-                <Waves className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Waves className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Swimming</h2>
               </div>
             {/* </div> */}
             {/* <div className='xsm:'> */}
               <div className='flex items-center'>
-                  <Target className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                  <Target className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                   <h2 className=' pl-2 pr-4 xsm:text-xl'>Darts</h2>
               </div>
               <div className='flex items-center'>
-                  <Gamepad2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                  <Gamepad2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                   <h2 className=' pl-2 pr-4 xsm:text-xl'>Gaming</h2>
               </div>
             {/* </div> */}
