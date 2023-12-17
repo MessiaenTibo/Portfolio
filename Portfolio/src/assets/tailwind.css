@@ -11,13 +11,10 @@ html, body, label {
   color: #1a202c;
 }
 
-@media (prefers-color-scheme: dark) {
-  ::selection {
-    background-color: #F0F3F4F0;
-    color: #1a202c;
-  }
+.dark ::selection {
+  background-color: #F0F3F4F0;
+  color: #1a202c;
 }
-
 
 
 
