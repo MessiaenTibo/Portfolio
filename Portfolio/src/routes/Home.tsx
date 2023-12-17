@@ -21,12 +21,12 @@ function Home() {
         Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I am currently studying at Howest in Kortrijk, Belgium. I am a hard working person and I am always willing to learn new things.
       </p>
 
-      <a href={cv} target="_blank" className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto text-white rounded mb-16 hover:text-orange-peel'>
+      <a href={cv} target="_blank" className='flex place-items-center place-content-center bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 hover:text-orange-peel dark:hover:text-orange-peel-dark'>
         <FileDown className='text-2xl m-4'/>
         <p className='m-4 ml-0'>DOWNLOAD MY CV</p></a>
 
       <div className='xl:flex xl:mx-24'>
-        <div className='w-full bg-caribbean-current text-center max-w-md m-auto xl:inline-block xl:h-200 xl:mt-0 xl:mr-6'>
+        <div className='w-full bg-caribbean-current dark:bg-caribbean-current-dark text-center max-w-md m-auto xl:inline-block xl:h-200 xl:mt-0 xl:mr-6'>
             <div className='p-10 text-white border-b border-whtie'>
               <img src={profileIcon} alt="Profile icon" className='rounded-full w-16 h-16 m-auto mb-4'/>
 
@@ -38,23 +38,23 @@ function Home() {
 
             <div className='flex justify-evenly text-white p-4'>
               <a href='tel:+32471620982' className='w-full group/Phone'>
-                <Phone className='fill-white group-hover/Phone:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p className='group-hover/Phone:text-orange-peel'>Call</p>
+                <Phone className='fill-white group-hover/Phone:fill-orange-peel dark:group-hover/Phone:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Call</p>
               </a>
 
               <a href='mailto:tibomessiaen@gmail.com' className='border-x w-full group/Email'>
-                <Send className='fill-white group-hover/Email:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p className='group-hover/Email:text-orange-peel'>Email</p>
+                <Send className='fill-white group-hover/Email:fill-orange-peel dark:group-hover/Email:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Email:text-orange-peel dark:group-hover/Email:text-orange-peel-dark'>Email</p>
               </a>
 
               <a href='https://www.linkedin.com/in/tibo-messiaen/' className='w-full group/Linkedin' target='_blank'>
-                <Linkedin className='fill-white group-hover/Linkedin:fill-orange-peel stroke-caribbean-current w-12 h-12 m-auto'/>
-                <p className='group-hover/Linkedin:text-orange-peel'>linked-in</p>
+                <Linkedin className='fill-white group-hover/Linkedin:fill-orange-peel dark:group-hover/Linkedin:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Linkedin:text-orange-peel dark:group-hover/Linkedin:text-orange-peel-dark'>linked-in</p>
               </a>
 
             </div>
 
-            <div className='bg-white p-8 mb-16 xl:mb-0'>
+            <div className='bg-white dark:bg-dark p-8 mb-16 xl:mb-0'>
               <ContactInfo icon={Phone}
                 title="+32 471 62 09 82"
                 subtitle="Mobile"/>
@@ -76,7 +76,7 @@ function Home() {
                 title="26/02/2003"
                 subtitle="Birthday"/>
 
-              <a href="/Tibomessiaen.vcf" download className='flex place-items-center place-content-center bg-caribbean-current w-fit m-auto rounded text-white hover:text-orange-peel'>
+              <a href="/Tibomessiaen.vcf" download className='flex place-items-center place-content-center bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto rounded text-white hover:text-orange-peel dark:hover:text-orange-peel-dark'>
                 <UserPlus className='text-2xl m-4'/>
                 <p className='m-4 ml-0'>DOWNLOAD MY VCARD</p>
               </a>
@@ -84,7 +84,7 @@ function Home() {
             </div>
 
         </div>
-        <div className='bg-white relative overflow-hidden p-12 m-auto mb-16 max-w-lg xl:h-200 xl:max-w-3xl xl:flex xl:flex-start'>
+        <div className='bg-white dark:bg-dark relative overflow-hidden p-12 m-auto mb-16 max-w-lg xl:h-200 xl:max-w-3xl xl:flex xl:flex-start'>
           <div className='inline-block xl:mr-12'>
             <h2 className='text-2xl text-center font-bold mb-6'>Education</h2>
 
@@ -116,7 +116,7 @@ function Home() {
 
           </div>
 
-          <div className='invisible xl:visible absolute bg-caribbean-current h-48 w-200 -rotate-45 bottom-0'>
+          <div className='invisible xl:visible absolute bg-caribbean-current dark:bg-caribbean-current-dark h-48 w-200 -rotate-45 bottom-0'>
 
           </div>
 
