@@ -16,7 +16,7 @@ export default ({title, paragraph, technologies, footnote, footnoteLink, footnot
         <div>
             <h1 className='text-2xl font-bold mb-4'>{title}</h1>
             <p className='text-xl font-regular pb-2'>{paragraph}</p>
-            <div className='mb-6 bg-white border-l-6 border-caribbean-current max-w-xl'>
+            <div className='mb-6 bg-white dark:bg-dark border-l-6 border-caribbean-current dark:border-caribbean-current-dark max-w-xl'>
                 <h1 className="text-lg p-6">Technologies</h1>
                 <div className="flex flex-wrap pb-6">
                     {technologies.map((technology, index) => {
@@ -36,8 +36,8 @@ export default ({title, paragraph, technologies, footnote, footnoteLink, footnot
                                     
                 </div>
             </div>
-            <p className="flex">{footnote}<p className='underline text-caribbean-current hover:text-orange-peel'>{footnoteLink}</p></p>
-            <p className="flex">{footnoteTwo}<p className='underline text-caribbean-current hover:text-orange-peel'>{footnoteLinkTwo}</p></p>
+            <p className="flex">{footnote}<p className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLink}</p></p>
+            <p className="flex">{footnoteTwo}<p className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLinkTwo}</p></p>
         </div>
     );
   };

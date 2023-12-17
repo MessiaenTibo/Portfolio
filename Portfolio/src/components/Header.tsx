@@ -40,42 +40,42 @@ export default ({title}:Props) => {
   }
 
   return (
-    <header className="flex place-content-between bg-white px-4 content-center text-center place-items-center h-12 shadow-header xl:h-16 xl:px-6 2xl:px-24">
+    <header className="flex place-content-between bg-white dark:bg-dark dark:text-white px-4 content-center text-center place-items-center h-12 shadow-header dark:shadow-headerDark xl:h-16 xl:px-6 2xl:px-24">
       <div className='hidden sm:flex '>
         <Link to='/' onClick={selectHome}><h1 className='text-2xl font-medium xl:text-3xl'>{title}</h1></Link>
       </div>
       <div className='hidden sm:flex xl:text-xl'>
         <ul>
           {active === 'About me' ?
-            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/about'>About me</Link></li> :
-            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/about' onClick={selectAbout}>About me</Link></li>}
+            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/about'>About me</Link></li> :
+            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/about' onClick={selectAbout}>About me</Link></li>}
 
           {active === 'Learning Adventure' ?
-            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/learning'>Learning Adventure</Link></li> :
-            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/learning' onClick={selectLearning}>Learning Adventure</Link></li>}
+            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/learning'>Learning Adventure</Link></li> :
+            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/learning' onClick={selectLearning}>Learning Adventure</Link></li>}
           
           {active === 'Projects' ?
-            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/projects'>Projects</Link></li> :
-            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/projects' onClick={selectProjects}>Projects</Link></li>}
+            <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/projects'>Projects</Link></li> :
+            <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/projects' onClick={selectProjects}>Projects</Link></li>}
 
         </ul>
       </div>
       <div className='flex w-full sm:hidden xl:text-xl'>
         <ul className='flex place-content-around w-full '>
             {active === 'Home' ?
-              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/'><Home className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
-              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/' onClick={selectHome}><Home className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
+              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/'><Home className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
+              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/' onClick={selectHome}><Home className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
             {active === 'About me' ?
-              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/about'><User className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
-              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/about' onClick={selectAbout}><User className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
+              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/about'><User className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
+              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/about' onClick={selectAbout}><User className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
 
             {active === 'Learning Adventure' ?
-              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/learning'><Scroll className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
-              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/learning' onClick={selectLearning}><Scroll className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
+              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/learning'><Scroll className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
+              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/learning' onClick={selectLearning}><Scroll className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
             
             {active === 'Projects' ?
-              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel' to='/projects'><Tv2 className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
-              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current' to='/projects' onClick={selectProjects}><Tv2 className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
+              <li className='inline'><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/projects'><Tv2 className='inline p-2 stroke-orange-peel' size={50}/></Link></li> :
+              <li className='inline'><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/projects' onClick={selectProjects}><Tv2 className='inline p-2 stroke-caribbean-current' size={50}/></Link></li>}
 
           </ul>
       </div>
