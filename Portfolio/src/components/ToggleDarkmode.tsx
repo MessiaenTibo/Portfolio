@@ -7,14 +7,21 @@ export default () => {
         setDarkMode((prevDarkMode) => !prevDarkMode);
         // Toggle dark mode class on the body
         document.documentElement.classList.toggle('dark', !darkMode);
+        // Save the preference to localStorage
+        localStorage.setItem('darkMode', JSON.stringify(!darkMode));
     };
 
     useEffect(() => {
-        //Set dark mode based on the system preferences
-        console.log(window.matchMedia('(prefers-color-scheme: dark)').matches);
-        const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setDarkMode(darkModeOn);
-        document.documentElement.classList.toggle('dark', darkModeOn);
+        const darkModeOn = localStorage.getItem('darkMode');
+        if (darkModeOn) {
+            setDarkMode(JSON.parse(darkModeOn));
+            document.documentElement.classList.toggle('dark', JSON.parse(darkModeOn));
+        } else {
+            // Set dark mode based on the system preferences
+            const darkModeOn = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            setDarkMode(darkModeOn);
+            document.documentElement.classList.toggle('dark', darkModeOn);
+        }
     }, [])
 
     return (
