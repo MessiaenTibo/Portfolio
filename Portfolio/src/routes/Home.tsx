@@ -38,18 +38,18 @@ function Home() {
 
             <div className='flex justify-evenly text-white p-4'>
               <a href='tel:+32471620982' className='w-full group/Phone'>
-                <Phone className='fill-white group-hover/Phone:fill-orange-peel group-hover/Phone:dark:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
-                <p className='group-hover/Phone:text-orange-peel group-hover/Phone:dark:text-orange-peel-dark'>Call</p>
+                <Phone className='fill-white group-hover/Phone:fill-orange-peel dark:group-hover/Phone:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Call</p>
               </a>
 
               <a href='mailto:tibomessiaen@gmail.com' className='border-x w-full group/Email'>
-                <Send className='fill-white group-hover/Email:fill-orange-peel group-hover/Email:dark:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
-                <p className='group-hover/Email:text-orange-peel group-hover/Email:dark:text-orange-peel-dark'>Email</p>
+                <Send className='fill-white group-hover/Email:fill-orange-peel dark:group-hover/Email:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Email:text-orange-peel dark:group-hover/Email:text-orange-peel-dark'>Email</p>
               </a>
 
               <a href='https://www.linkedin.com/in/tibo-messiaen/' className='w-full group/Linkedin' target='_blank'>
-                <Linkedin className='fill-white group-hover/Linkedin:fill-orange-peel group-hover/Linkedin:dark:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
-                <p className='group-hover/Linkedin:text-orange-peel group-hover/Linkedin:dark:text-orange-peel-dark'>linked-in</p>
+                <Linkedin className='fill-white group-hover/Linkedin:fill-orange-peel dark:group-hover/Linkedin:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
+                <p className='group-hover/Linkedin:text-orange-peel dark:group-hover/Linkedin:text-orange-peel-dark'>linked-in</p>
               </a>
 
             </div>
