@@ -86,7 +86,7 @@ function Home() {
         </div>
         <div className='bg-white dark:bg-dark relative overflow-hidden p-12 m-auto mb-16 max-w-lg xl:h-200 xl:max-w-3xl xl:flex xl:flex-start'>
           <div className='inline-block xl:mr-12'>
-            <h2 className='text-2xl text-center font-bold mb-6'>Education</h2>
+            <h2 className='text-2xl text-center text-caribbean-current dark:text-caribbean-current-dark font-bold mb-6'>Education</h2>
 
             <EducationInfo title='Howest - Bechelor'
               subtitle='Multimedia & creative technologies - Next Web Developer'
@@ -106,7 +106,7 @@ function Home() {
           </div>
 
           <div className='inline-block'>
-            <h2 className='text-2xl text-center font-bold mb-6 mt-12 xl:mt-0'>Skills</h2>
+            <h2 className='text-2xl text-center text-caribbean-current dark:text-caribbean-current-dark  font-bold mb-6 mt-12 xl:mt-0'>Skills</h2>
 
             <ol className='list-disc pl-4'>
               <li>Full stack developer</li>

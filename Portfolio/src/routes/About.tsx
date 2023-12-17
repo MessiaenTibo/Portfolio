@@ -5,7 +5,7 @@ import Header from '../components/Header'
 function About() {
 
   return (
-    <div className="About">
+    <div className="About flex justify-center items-center h-full">
         <Aboutme />
     </div>
   )

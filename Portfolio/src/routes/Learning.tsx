@@ -28,7 +28,8 @@ function Learning() {
           <LearningCard side='right' title='2MCT' subtitle='C#, Azure, Docker, Dapr' content='We learned a more modern way of making api routes in the module BACKEND. We also saw the basic aspects of docker so we could publish a docker image to azure. This made our api routes publicaly available.'/>
           <LearningCard side='left' title='2MCT' subtitle='HTML, CSS, Javascript, Typescript, Tailwind, React' content='This portfolio website you are looking at right now'/>
           <LearningCard side='right' title='2MCT' subtitle='React Native, TypeScript' content='I created a DartCounter app in react native. I like to dart in my free time and this project was my opportunity to create my own version of a dart app, completely to my likings.'/>
-          
+          <LearningCard side='left' title='3MCT' subtitle='Vue.js, GraphQL, Node.js, PWA, Bootstrap i18n, Unit testing, lerna' content='This year we have a module called Advenced Full Stack Development. We had 1 big project over the year, were we worked in a group of 3 to create a website about a sports complex with vue.js for the frontend and node.js for the backend.'/>
+
           <SeperatorLine year="NOW"/>
         </div>
     </div>
