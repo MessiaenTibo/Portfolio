@@ -42,7 +42,7 @@ function Projects() {
             </div>
         </div>
 
-        <div className='flex flex-colmd:gap-8 md:flex-row-reverse'>
+        <div className='flex flex-col md:gap-8 md:flex-row-reverse'>
             <div className='flex w-full pb-4 md:w-1/2 xl:p-12'>
               <video title='1VS1' className='xl:w-1/2 p-2' src={TeamProject1vs1Demo} controls>Your browser does not support the video tag.</video>
               <video title='1VS1' className='hidden xl:flex w-1/2 p-2' src={TeamProjectShuttleRunDemo} controls>Your browser does not support the video tag.</video>
