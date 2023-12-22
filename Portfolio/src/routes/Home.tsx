@@ -1,7 +1,3 @@
-import Header from '../components/Header'
-
-import { Link } from 'react-router-dom';
-
 import { FileDown, Phone, Send, Linkedin , Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
 
 import profileIcon from '../assets/imgs/profileIcon.png'
@@ -9,20 +5,25 @@ import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
 import ContactInfo from '../components/ContactInfo';
 import EducationInfo from '../components/EducationInfo';
 import Title from '../components/Title';
+import { useEffect } from 'react';
 
 function Home() {
+
+  useEffect(() => {
+    document.title = 'Tibo Messiaen | Home'
+  }, [])
 
   return (
     <div className="Home">
 
-      <Title title="Welcome"/>
+      <Title title="Welcome" typeAnimation={true}/>
 
       <p className='text-center text-sm px-4 pb-4 max-w-lg m-auto xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
         Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I am currently studying at Howest in Kortrijk, Belgium. I am a hard working person and I am always willing to learn new things.
       </p>
 
       <a href={cv} target="_blank" className='flex place-items-center place-content-center bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 hover:text-orange-peel dark:hover:text-orange-peel-dark'>
-        <FileDown className='text-2xl m-4'/>
+        <FileDown className=' FileDown text-2xl m-4'/>
         <p className='m-4 ml-0'>DOWNLOAD MY CV</p></a>
 
       <div className='xl:flex xl:mx-24'>

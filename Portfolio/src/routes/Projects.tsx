@@ -1,8 +1,5 @@
-// Assets
-// Imgs
-import placeholder from '../assets/imgs/placeholder.png'
-import blackjack from '../assets/imgs/blackjack.png'
-import PortfolioMockup from '../assets/imgs/PortfolioMockup.png'
+import { useEffect, useState } from 'react';
+
 // Videos
 import TeamProject1vs1Demo from '../assets/videos/TeamProject1vs1Demo.mp4'
 import TeamProjectShuttleRunDemo from '../assets/videos/TeamProjectShuttleRunDemo.mp4'
@@ -11,13 +8,17 @@ import ProjectOneDemo from '../assets/videos/ProjectOneDemo.mp4'
 // Components
 import Title from '../components/Title'
 import ProjectInfo from '../components/ProjectInfo'
-
 import CloudinaryImage from '../components/CloudinaryImage'
-
-import React, { Suspense } from 'react';
+import ScrollArrow from '../components/ScrollArrow';
 
 
 function Projects() {
+
+  useEffect(() => {
+    document.title = 'Tibo Messiaen | Projects'
+  }, [])
+
+  
 
   return (
     <div className="Projects mx-4 md:mx-8 2xl:max-w-screen-2xl 2xl:m-auto">
@@ -68,6 +69,7 @@ function Projects() {
               <ProjectInfo title="Blackjack" paragraph="I reacreated the popular card game blackjack. Also know as 21." technologies={[{title:"Front-end", technologies:["HTML","CSS","Javascript"]}]} footnote='Website:' footnoteLink={<a href="https://messiaentibo.github.io/Interaction-Design-Eindopdracht/" target='_blank'>Blackjack</a>}/>
             </div>
         </div>
+        <ScrollArrow />
     </div>
   )
 }

@@ -43,21 +43,21 @@ export default ({title}:Props) => {
   return (
     <header className="flex place-content-between bg-white dark:bg-dark dark:text-white px-4 content-center text-center place-items-center h-12 shadow-header dark:shadow-headerDark xl:h-16 xl:px-6 2xl:px-24">
       <div className='hidden sm:flex '>
-        <Link to='/' onClick={selectHome}><h1 className='text-2xl font-medium xl:text-3xl'>{title}</h1></Link>
+        <Link to='/' onClick={selectHome}><h1 className='text-2xl font-medium xl:text-3xl hover:text-caribbean-current dark:hover:text-caribbean-current-dark'>{title}</h1></Link>
       </div>
       <div className='hidden sm:flex xl:text-xl'>
         <ul className='flex justify-center items-center'>
           {active === 'About me' ?
-            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/about'>About me</Link></li> :
-            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/about' onClick={selectAbout}>About me</Link></li>}
+            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/about'>About me</Link></li> :
+            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/about' onClick={selectAbout}>About me</Link></li>}
 
           {active === 'Learning Adventure' ?
-            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/learning'>Learning Adventure</Link></li> :
-            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/learning' onClick={selectLearning}>Learning Adventure</Link></li>}
+            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/learning'>Learning Adventure</Link></li> :
+            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/learning' onClick={selectLearning}>Learning Adventure</Link></li>}
           
           {active === 'Projects' ?
-            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/projects'>Projects</Link></li> :
-            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/projects' onClick={selectProjects}>Projects</Link></li>}
+            <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/projects'>Projects</Link></li> :
+            <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/projects' onClick={selectProjects}>Projects</Link></li>}
           
           <li><ToggleDarkmode /></li>
         </ul>

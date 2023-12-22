@@ -1,10 +1,17 @@
-import Header from '../components/Header'
-import Title from '../components/Title'
-import SeperatorLine from '../components/SeperatorLine'
-import LearningCard from '../components/LearningCard'
+// React
+import { useEffect, useState } from 'react';
 
+// Components
+import Title from '../components/Title';
+import SeperatorLine from '../components/SeperatorLine';
+import LearningCard from '../components/LearningCard';
+import ScrollArrow from '../components/ScrollArrow';
 
 function Learning() {
+
+  useEffect(() => {
+    document.title = 'Tibo Messiaen | Learning';
+  }, []);
 
   return (
     <div className="Learning">
@@ -32,6 +39,7 @@ function Learning() {
 
           <SeperatorLine year="NOW"/>
         </div>
+        <ScrollArrow />
     </div>
   )
 }
