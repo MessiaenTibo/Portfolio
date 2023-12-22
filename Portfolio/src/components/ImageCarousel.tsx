@@ -41,7 +41,7 @@ export default () => {
         <CloudinaryImage link={images[current].link} alt={images[current].alt} imgClass='rounded-3xl shadow-xl w-full'/>
         <div className='flex gap-1.5 justify-center p-2'>
             {images.map((image, index) => (
-                <button onClick={setImage(index)} key={index} className={`bg-dark dark:bg-white rounded-full h-4 w-4 ${index === current ? 'opacity-100' : 'opacity-20'}`}></button>
+                <button onClick={setImage(index)} key={index} className={`bg-caribbean-current dark:bg-caribbean-current-dark rounded-full h-4 w-4 ${index === current ? 'opacity-100' : 'opacity-30'}`}></button>
             ))}
         </div>
     </div>
