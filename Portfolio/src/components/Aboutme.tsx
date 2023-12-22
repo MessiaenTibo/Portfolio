@@ -5,7 +5,8 @@ import AboutMe from '../assets/imgs/AboutMe.jpg'
 
 import { Gamepad2, Waves, Target, Code2 } from 'lucide-react';
 
-import CloudinaryImage from '../components/CloudinaryImage'
+// import CloudinaryImage from '../components/CloudinaryImage'
+import ImageCarousel from '../components/ImageCarousel'
 
 export default () => {
 
@@ -24,7 +25,6 @@ export default () => {
           <div className=''>
             <h2 className='text-xl font-bold mb-4'>My hobbies</h2>
             <div className='flex flex-wrap'>
-            {/* <div className='xsm:inline-block'> */}
               <div className='flex items-center'>
                 <Code2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Code</h2>
@@ -33,8 +33,6 @@ export default () => {
                 <Waves className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Swimming</h2>
               </div>
-            {/* </div> */}
-            {/* <div className='xsm:'> */}
               <div className='flex items-center'>
                   <Target className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                   <h2 className=' pl-2 pr-4 xsm:text-xl'>Darts</h2>
@@ -43,14 +41,13 @@ export default () => {
                   <Gamepad2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
                   <h2 className=' pl-2 pr-4 xsm:text-xl'>Gaming</h2>
               </div>
-            {/* </div> */}
             </div>
           </div>
         </div>
 
         <div className='lg:w-1/2 lg:p-4 w-full'>
-          {/* <img src={AboutMe} alt="Image" className=' rounded-3xl shadow-xl'/> */}
-          <CloudinaryImage link='AboutMe_rhhb8j.png' alt='AboutMe' imgClass='rounded-3xl shadow-xl w-full'/>
+          {/* <CloudinaryImage link='AboutMe_rhhb8j.png' alt='AboutMe' imgClass='rounded-3xl shadow-xl w-full'/> */}
+          <ImageCarousel />
         </div>
       </div>
     </div>
