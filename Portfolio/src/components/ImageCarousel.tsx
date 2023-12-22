@@ -6,9 +6,9 @@ export default () => {
     // Carousel image list
     const images = [
         {link: 'AboutMe_rhhb8j.png', alt: 'AboutMe'},
-        {link: 'PortfolioMockup_qjs7ns.png', alt: 'AboutMe'},
-        {link: 'Blackjack_rbtyfa.png', alt: 'AboutMe'},
-        {link: 'Portfolio_j9ncfs.png', alt: 'AboutMe'},
+        {link: 'Koetstocht_tkviuw.png', alt: 'AboutMe'},
+        {link: 'Projectone_zl8l5g.png', alt: 'AboutMe'},
+        {link: 'Trouwfeest_cjmie3.png', alt: 'AboutMe'},
     ]
 
     const [current, setCurrent] = useState(0);
@@ -38,11 +38,8 @@ export default () => {
 
   return (
     <div >
-        <div>
-            <CloudinaryImage link={images[current].link} alt={images[current].alt} imgClass='rounded-3xl shadow-xl w-full'/>
-        </div>
+        <CloudinaryImage link={images[current].link} alt={images[current].alt} imgClass='rounded-3xl shadow-xl w-full'/>
         <div className='flex gap-1.5 justify-center p-2'>
-            {/* for each link */}
             {images.map((image, index) => (
                 <button onClick={setImage(index)} key={index} className={`bg-dark dark:bg-white rounded-full h-4 w-4 ${index === current ? 'opacity-100' : 'opacity-20'}`}></button>
             ))}
