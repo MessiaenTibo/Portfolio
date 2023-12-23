@@ -19,18 +19,17 @@ const App: React.FC = () => {
     const newAnimation: BackgroundAnimation = {
       id: Date.now(),
       x: clientX,
-      y: clientY,
+      y: clientY + window.scrollY, // Adjust for scroll offset
       size: 20, // initial size
     };
 
     const newAnimationTwo: BackgroundAnimation = {
       id: Date.now(),
       x: clientX,
-      y: clientY,
+      y: clientY + window.scrollY, // Adjust for scroll offset
       size: 20, // initial size
     };
 
-    
     setAnimations((prevAnimations) => [...prevAnimations, newAnimation]);
 
     // Delete the animation after 4 seconds
@@ -89,7 +88,7 @@ const App: React.FC = () => {
       {animations.map((animation) => (
         <div
           key={animation.id}
-          className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark fixed -z-10 motion-reduce:hidden'
+          className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark absolute -z-10 motion-reduce:hidden'
           style={{
             top: animation.y - animation.size / 2,
             left: animation.x - animation.size / 2,
@@ -101,7 +100,7 @@ const App: React.FC = () => {
       {animationsTwo.map((animation) => (
         <div
           key={animation.id}
-          className='BackgroundAnimation rounded-full bg-white dark:bg-dark fixed -z-10 motion-reduce:hidden'
+          className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute -z-10 motion-reduce:hidden'
           style={{
             top: animation.y - animation.size / 2,
             left: animation.x - animation.size / 2,
