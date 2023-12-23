@@ -15,6 +15,7 @@ const App: React.FC = () => {
   const lastFrameTime = useRef<number | null>(null);
 
   const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
+
     const { clientX, clientY } = e;
     const newAnimation: BackgroundAnimation = {
       id: Date.now(),
@@ -83,32 +84,39 @@ const App: React.FC = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className=''>
+    <div className='relative overflow-hidden'>
+      {/* Background (workaround background for the backgroundimage) */}
       <div className='bg-white dark:bg-dark fixed h-screen w-screen -z-10'></div>
-      {animations.map((animation) => (
-        <div
-          key={animation.id}
-          className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark absolute -z-10 motion-reduce:hidden'
-          style={{
-            top: animation.y - animation.size / 2,
-            left: animation.x - animation.size / 2,
-            height: animation.size,
-            width: animation.size,
-          }}
-        ></div>
-      ))}
-      {animationsTwo.map((animation) => (
-        <div
-          key={animation.id}
-          className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute -z-10 motion-reduce:hidden'
-          style={{
-            top: animation.y - animation.size / 2,
-            left: animation.x - animation.size / 2,
-            height: animation.size,
-            width: animation.size,
-          }}
-        ></div>
-      ))}
+
+      {/* Container for animations */}
+      <div className='absolute top-0 left-0 w-full h-full pointer-events-none'>
+        {animations.map((animation) => (
+          <div
+            key={animation.id}
+            className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark absolute -z-10 motion-reduce:hidden'
+            style={{
+              top: animation.y - animation.size / 2,
+              left: animation.x - animation.size / 2,
+              height: animation.size,
+              width: animation.size,
+            }}
+          ></div>
+        ))}
+        {animationsTwo.map((animation) => (
+          <div
+            key={animation.id}
+            className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute -z-10 motion-reduce:hidden'
+            style={{
+              top: animation.y - animation.size / 2,
+              left: animation.x - animation.size / 2,
+              height: animation.size,
+              width: animation.size,
+            }}
+          ></div>
+        ))}
+      </div>
+
+      {/* Main content */}
       <div
         onClick={handleBackgroundClick}
         style={{
