@@ -7,33 +7,37 @@ interface BackgroundAnimation {
   x: number;
   y: number;
   size: number;
+  zIndex: number;
 }
 
 const App: React.FC = () => {
   const [animations, setAnimations] = useState<BackgroundAnimation[]>([]);
   const [animationsTwo, setAnimationsTwo] = useState<BackgroundAnimation[]>([]);
   const lastFrameTime = useRef<number | null>(null);
+  const zIndexCounter = useRef<number>(1); // Initialize the counter
 
   const handleBackgroundClick = (e: React.MouseEvent<HTMLDivElement>) => {
-
     const { clientX, clientY } = e;
+    const zIndex = zIndexCounter.current++;
+
     const newAnimation: BackgroundAnimation = {
       id: Date.now(),
       x: clientX,
-      y: clientY + window.scrollY, // Adjust for scroll offset
-      size: 20, // initial size
+      y: clientY + window.scrollY,
+      size: 20,
+      zIndex: zIndex, // Assign the zIndex
     };
 
     const newAnimationTwo: BackgroundAnimation = {
       id: Date.now(),
       x: clientX,
-      y: clientY + window.scrollY, // Adjust for scroll offset
-      size: 20, // initial size
+      y: clientY + window.scrollY,
+      size: 20,
+      zIndex: zIndex, // Assign the same zIndex
     };
 
     setAnimations((prevAnimations) => [...prevAnimations, newAnimation]);
 
-    // Delete the animation after 4 seconds
     setTimeout(() => {
       setAnimations((prevAnimations) =>
         prevAnimations.filter((animation) => animation.id !== newAnimation.id)
@@ -43,7 +47,6 @@ const App: React.FC = () => {
     setTimeout(() => {
       setAnimationsTwo((prevAnimations) => [...prevAnimations, newAnimationTwo]);
 
-      // Delete the animation after 4 seconds
       setTimeout(() => {
         setAnimationsTwo((prevAnimations) =>
           prevAnimations.filter((animation) => animation.id !== newAnimation.id)
@@ -93,24 +96,26 @@ const App: React.FC = () => {
         {animations.map((animation) => (
           <div
             key={animation.id}
-            className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark absolute -z-10 motion-reduce:hidden'
+            className='BackgroundAnimation rounded-full bg-caribbean-current dark:bg-caribbean-current-dark absolute motion-reduce:hidden'
             style={{
               top: animation.y - animation.size / 2,
               left: animation.x - animation.size / 2,
               height: animation.size,
               width: animation.size,
+              zIndex: animation.zIndex, // Apply the zIndex
             }}
           ></div>
         ))}
         {animationsTwo.map((animation) => (
           <div
             key={animation.id}
-            className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute -z-10 motion-reduce:hidden'
+            className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute motion-reduce:hidden'
             style={{
               top: animation.y - animation.size / 2,
               left: animation.x - animation.size / 2,
               height: animation.size,
               width: animation.size,
+              zIndex: animation.zIndex, // Apply the zIndex
             }}
           ></div>
         ))}
@@ -123,6 +128,8 @@ const App: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           minHeight: '100vh',
+          position: 'relative', // Ensure position is set to relative
+          zIndex: zIndexCounter.current, // Set a higher zIndex for the main content
         }}
         className=' bg-[url(/background-pattern-light-small.svg)] dark:bg-[url(/background-pattern-dark-small.svg)] bg-transparent bg-repeat bg-auto'
       >
