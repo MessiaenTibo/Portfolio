@@ -16,13 +16,8 @@ export default ({title}:Props) => {
     if(window.location.href.includes('about')) setActive('About me');
     if(window.location.href.includes('learning')) setActive('Learning Adventure');
     if(window.location.href.includes('projects')) setActive('Projects');
+    if(window.location.href.includes('contact')) setActive('Contact');
   }, [])
-
-  const body = document.querySelector("body");
-
-  // const handleClick = () => {
-  //   if(body) body.classList.toggle("has-mobile-nav");
-  // }
 
   const selectHome = () => {
     setActive('Home');
