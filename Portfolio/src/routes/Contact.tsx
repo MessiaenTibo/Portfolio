@@ -29,12 +29,12 @@ function Contact() {
         >
             <h1 className='text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl'>Contact</h1>
             <div className='flex flex-col gap-4 w-full md:flex-row'>
-                <InputField title="Firstname" id="firstname" type="text" required={true}/>
-                <InputField title="Lastname" id="lastname" type="text" required={true}/>
+                <InputField title="Firstname" id="firstname" type="text" required={true} placeholder='John' maxLenght={20}/>
+                <InputField title="Lastname" id="lastname" type="text" required={true} placeholder='Doe' maxLenght={20}/>
             </div>
-            <InputField title="Email" id="email" type="email" required={true}/>
-            <InputField title="Subject" id="subject" type="text"/>
-            <InputField title="Message" id="message" type="textarea"/>
+            <InputField title="Email" id="email" type="email" required={true} placeholder='John.Doe@email.com' maxLenght={50}/>
+            <InputField title="Subject" id="subject" type="text" maxLenght={100}/>
+            <InputField title="Message" id="message" type="textarea" maxLenght={500}/>
             <button type="submit" className=" rounded-md py-2 px-8 font-bold w-fit bg-caribbean-current dark:bg-caribbean-current-dark text-white">Submit</button>
         </form>
     </div>
