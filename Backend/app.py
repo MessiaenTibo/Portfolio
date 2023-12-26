@@ -13,6 +13,10 @@ mails_directory = 'mails'
 # Ensure the directory exists
 os.makedirs(mails_directory, exist_ok=True)
 
+@app.route('/api/active', methods=['GET'])
+def active():
+    return jsonify({'success': True, 'message': 'Backend is active'})
+
 @app.route('/api/contact', methods=['POST'])
 def contact_form():
     try:

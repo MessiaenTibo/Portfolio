@@ -25,7 +25,7 @@ export default () => {
     }, [])
 
     return (
-        <div className="flex flex-col justify-center ml-3" onClick={toggleDarkMode}>
+        <div className="flex flex-col justify-center ml-3 focus-within:outline outline-2" onClick={toggleDarkMode}>
         <input type="checkbox" name="light-switch" className="light-switch sr-only"/>
         <label className="relative cursor-pointer p-2" htmlFor="light-switch">
             <svg className="dark:hidden scale-[2]" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
