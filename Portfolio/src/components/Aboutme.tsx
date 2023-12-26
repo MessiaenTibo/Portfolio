@@ -11,7 +11,7 @@ import ImageCarousel from '../components/ImageCarousel'
 export default () => {
 
   return (
-    <div className='my-4 p-10 bg-white dark:bg-dark lg:border-l-8 border-caribbean-current dark:border-caribbean-current-dark lg:m-12 2xl:max-w-8xl 2xl:mx-auto overflow-hidden relative'>
+    <div className='my-4 p-10 bg-white shadow-md dark:bg-dark lg:border-l-8 border-caribbean-current dark:border-caribbean-current-dark lg:m-12 2xl:max-w-8xl 2xl:mx-auto overflow-hidden relative'>
       <div className='flex flex-col lg:flex-row items-center xl-items-start'>
         <div className='lg:w-1/2'>
           <div className=''>

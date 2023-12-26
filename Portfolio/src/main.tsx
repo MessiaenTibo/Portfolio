@@ -9,6 +9,7 @@ import Home from './routes/Home';
 import About from './routes/About';
 import Learning from './routes/Learning';
 import Projects from './routes/Projects';
+import Contact from './routes/Contact';
 import Container from './components/Container';
 
 import robots from '/robots.txt'
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'projects',
         element: <Projects />
+      },
+      {
+        path: 'contact',
+        element: <Contact/>
       },
       {
         path: 'robots.txt',
