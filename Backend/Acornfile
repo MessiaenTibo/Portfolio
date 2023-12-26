@@ -1,0 +1,8 @@
+containers: app: {
+    build: context: "."
+    ports: publish: "8000/http"
+    if args.dev {
+        dirs: "/": "./"
+        env: FLASK_DEBUG: "1"
+    }
+}

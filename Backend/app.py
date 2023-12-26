@@ -13,6 +13,10 @@ mails_directory = 'mails'
 # Ensure the directory exists
 os.makedirs(mails_directory, exist_ok=True)
 
+@app.route('/')
+def hello():
+    return 'Hello, Flask!'
+
 @app.route('/api/active', methods=['GET'])
 def active():
     return jsonify({'success': True, 'message': 'Backend is active'})
@@ -58,4 +62,4 @@ def save_mail(firstname, lastname, email, subject, message):
         }, file)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
