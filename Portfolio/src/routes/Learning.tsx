@@ -37,6 +37,9 @@ function Learning() {
           <LearningCard side='right' title='2MCT' subtitle='React Native, TypeScript' content='I created a DartCounter app in react native. I like to dart in my free time and this project was my opportunity to create my own version of a dart app, completely to my likings.'/>
           <LearningCard side='left' title='3MCT' subtitle='Vue.js, GraphQL, Node.js, PWA, Bootstrap i18n, Unit testing, lerna' content='This year we have a module called Advenced Full Stack Development. We had 1 big project over the year, were we worked in a group of 3 to create a website about a sports complex with vue.js for the frontend and node.js for the backend.'/>
 
+          <SeperatorLine year="2024"/>
+          <LearningCard side='right' title='Research Project' subtitle='Chrome-extension, eye-tracking, mediapipeline' content="For my 6st and final semester of MCT I had to make a research project. This project is very important and is the base for my bachelor's thesis. In this project I answered the question:&quot;Can eye movements and blinks be translated into website interactions via a Chrome extension?&quot;" />
+
           <SeperatorLine year="NOW"/>
         </div>
         <ScrollArrow />
