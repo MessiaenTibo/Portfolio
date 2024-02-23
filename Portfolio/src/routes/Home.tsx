@@ -1,4 +1,4 @@
-import { FileDown, Phone, Send, Linkedin , Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
+import { FileDown, Instagram, Send, Linkedin , Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
 
 import profileIcon from '../assets/imgs/profileIcon.png'
 import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
@@ -27,7 +27,7 @@ function Home() {
         <p className='m-4 ml-0'>DOWNLOAD MY CV</p></a>
 
       <div className='xl:flex xl:mx-24'>
-        <div className='w-full bg-caribbean-current dark:bg-caribbean-current-dark text-center max-w-md m-auto xl:inline-block xl:h-200 xl:mt-0 xl:mr-6'>
+        <div className='w-full bg-caribbean-current dark:bg-caribbean-current-dark text-center max-w-md m-auto xl:inline-block xl:h-[45.85rem] xl:mt-0 xl:mr-6'>
             <div className='p-10 text-white border-b border-whtie'>
               <img src={profileIcon} alt="Profile icon" className='rounded-full w-16 h-16 m-auto mb-4'/>
 
@@ -38,9 +38,9 @@ function Home() {
             </div>
 
             <div className='flex justify-evenly text-white p-4'>
-              <a href='tel:+32471620982' className='w-full group/Phone'>
-                <Phone className='fill-white group-hover/Phone:fill-orange-peel dark:group-hover/Phone:fill-orange-peel-dark stroke-caribbean-current dark:stroke-caribbean-current-dark w-12 h-12 m-auto'/>
-                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Call</p>
+              <a href='https://www.instagram.com/tibomessiaen/' className='w-full group/Phone'>
+                <Instagram className='stroke-white group-hover/Phone:stroke-orange-peel dark:group-hover/Phone:stroke-orange-peel-dark   w-12 h-12 m-auto'/>
+                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Instagram</p>
               </a>
 
               <a href='mailto:tibomessiaen@gmail.com' className='border-x w-full group/Email'>
@@ -56,9 +56,6 @@ function Home() {
             </div>
 
             <div className='bg-white dark:bg-dark p-8 mb-16 xl:mb-0'>
-              <ContactInfo icon={Phone}
-                title="+32 471 62 09 82"
-                subtitle="Mobile"/>
 
               <ContactInfo icon={Mail}
                 title="tibomessiaen@gmail.com"
@@ -85,7 +82,7 @@ function Home() {
             </div>
 
         </div>
-        <div className='bg-white dark:bg-dark relative overflow-hidden p-12 m-auto mb-16 max-w-lg xl:h-200 xl:max-w-3xl xl:flex xl:flex-start'>
+        <div className='bg-white dark:bg-dark relative overflow-hidden p-12 m-auto mb-16 max-w-lg xl:h-[45.85rem] xl:max-w-3xl xl:flex xl:flex-start'>
           <div className='inline-block xl:mr-12'>
             <h2 className='text-2xl text-center text-caribbean-current dark:text-caribbean-current-dark font-bold mb-6'>Education</h2>
 
