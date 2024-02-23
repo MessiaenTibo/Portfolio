@@ -38,7 +38,7 @@ function Home() {
             </div>
 
             <div className='flex justify-evenly text-white p-4'>
-              <a href='https://www.instagram.com/tibomessiaen/' className='w-full group/Phone'>
+              <a href='https://www.instagram.com/tibomessiaen/' className='w-full group/Phone' target='_blank'>
                 <Instagram className='stroke-white group-hover/Phone:stroke-orange-peel dark:group-hover/Phone:stroke-orange-peel-dark   w-12 h-12 m-auto'/>
                 <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Instagram</p>
               </a>
