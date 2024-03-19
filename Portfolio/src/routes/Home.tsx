@@ -1,4 +1,4 @@
-import { FileDown, Instagram, Send, Linkedin , Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
+import { FileDown, Github, Send, Linkedin , Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
 
 import profileIcon from '../assets/imgs/profileIcon.png'
 import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
@@ -38,9 +38,9 @@ function Home() {
             </div>
 
             <div className='flex justify-evenly text-white p-4'>
-              <a href='https://www.instagram.com/tibomessiaen/' className='w-full group/Phone' target='_blank'>
-                <Instagram className='stroke-white group-hover/Phone:stroke-orange-peel dark:group-hover/Phone:stroke-orange-peel-dark   w-12 h-12 m-auto'/>
-                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Instagram</p>
+              <a href='https://github.com/MessiaenTibo' className='w-full group/Phone' target='_blank'>
+                <Github className='stroke-white group-hover/Phone:stroke-orange-peel dark:group-hover/Phone:stroke-orange-peel-dark   w-12 h-12 m-auto'/>
+                <p className='group-hover/Phone:text-orange-peel dark:group-hover/Phone:text-orange-peel-dark'>Github</p>
               </a>
 
               <a href='mailto:tibomessiaen@gmail.com' className='border-x w-full group/Email'>
