@@ -28,8 +28,9 @@ export default () => {
         <div className="flex flex-col justify-center ml-3 focus-within:outline outline-2" onClick={toggleDarkMode}>
         <input type="checkbox" name="light-switch" className="light-switch sr-only"/>
         <label className="relative cursor-pointer p-2" htmlFor="light-switch">
-            <svg className="dark:hidden scale-[2]" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                <path className=" fill-orange-500" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+            <svg className="dark:hidden scale-[2] transition-transform transform-gpu hover:scale-[2.2] duration-500 ease-in-out overflow-visible group" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path className=" transform origin-center fill-orange-500 motion-safe:animate-spin-slow motion-safe:group-hover:animate-spin-fast" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+                {/* <path className="fill-orange-100" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" /> */}
                 <path className="fill-orange-500" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
             </svg>
             <svg className="hidden dark:block scale-[2]" width="16" height="16" xmlns="http://www.w3.org/2000/svg">

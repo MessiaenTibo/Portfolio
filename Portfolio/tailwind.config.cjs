@@ -1,3 +1,5 @@
+const { scale } = require('@cloudinary/url-gen/actions/resize');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -75,6 +77,34 @@ module.exports = {
       maxWidth: {
         '1/2': '50%',
         '8xl': '90rem',
+      },
+      keyframes: {
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg) scale(1)' },
+          '12%': { transform: 'rotate(45deg) scale(1.1)' },
+          '25%': { transform: 'rotate(90deg) scale(1)' },
+          '37%': { transform: 'rotate(135deg) scale(1.1)' },
+          '50%': { transform: 'rotate(180deg) scale(1)' },
+          '62%': { transform: 'rotate(225deg) scale(1.1)' },
+          '75%': { transform: 'rotate(270deg) scale(1)' },
+          '87%': { transform: 'rotate(315deg) scale(1.1)' },
+          '100%': { transform: 'rotate(360deg) scale(1)' },
+        },
+        'spin-fast': {
+          '0%': { transform: 'rotate(0deg) scale(1)' },
+          '12%': { transform: 'rotate(45deg) scale(1.08)' },
+          '25%': { transform: 'rotate(90deg) scale(1)' },
+          '37%': { transform: 'rotate(135deg) scale(1.08)' },
+          '50%': { transform: 'rotate(180deg) scale(1)' },
+          '62%': { transform: 'rotate(225deg) scale(1.08)' },
+          '75%': { transform: 'rotate(270deg) scale(1)' },
+          '87%': { transform: 'rotate(315deg) scale(1.08)' },
+          '100%': { transform: 'rotate(360deg) scale(1)' },
+        },
+      },
+      animation: {
+        'spin-slow': 'spin-slow 10s linear infinite',
+        'spin-fast': 'spin-fast 8s linear infinite',
       },
     },
   },
