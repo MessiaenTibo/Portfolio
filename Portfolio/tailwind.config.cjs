@@ -1,5 +1,3 @@
-const { scale } = require('@cloudinary/url-gen/actions/resize');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -101,10 +99,30 @@ module.exports = {
           '87%': { transform: 'rotate(315deg) scale(1.08)' },
           '100%': { transform: 'rotate(360deg) scale(1)' },
         },
+        'twinkel-normal': {
+          '0%': { opacity: 0.8 },
+          '50%': { opacity: 0.4 },
+          '100%': { opacity: 0.8 },
+        },
+        'twinkel-bright': {
+          '0%': { opacity: 1 },
+          '50%': { opacity: 0.6 },
+          '100%': { opacity: 1 },
+        },
+        'screen-apear': {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 10s linear infinite',
         'spin-fast': 'spin-fast 8s linear infinite',
+        'twinkel-slow': 'twinkel-normal 10s ease-in-out infinite',
+        'twinkel-medium': 'twinkel-normal 8s ease-in-out infinite',
+        'twinkel-fast': 'twinkel-normal 6s ease-in-out infinite',
+        'twinkel-bright-slow': 'twinkel-bright 8s ease-in-out infinite',
+        'twinkel-bright-medium': 'twinkel-bright 6s ease-in-out infinite',
+        'twinkel-bright-fast': 'twinkel-bright 4s ease-in-out infinite',
       },
     },
   },
