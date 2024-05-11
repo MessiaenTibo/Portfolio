@@ -86,7 +86,11 @@ function Projects() {
       technologies: [
         {
           title: 'Front-end',
-          technologies: ['HTML', 'Tailwindcss', 'Typescript'],
+          technologies: ['React', 'HTML', 'Tailwindcss', 'Typescript'],
+        },
+        {
+          title: 'Other',
+          technologies: ['Cloudinary', 'Netlify', 'For'],
         },
       ],
       footnote: 'Website:',
