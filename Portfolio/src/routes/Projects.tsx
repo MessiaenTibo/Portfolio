@@ -22,6 +22,31 @@ function Projects() {
   const [projects, setProjects] = useState([
     {
       visible: true,
+      title: 'JobFunders Mobile App',
+      paragraph: `I created the frontend of the JobFunders mobile app. JobFunders is a platform that connects job seekers with companies. The app is built with ReactNative and Expo. The backend is built with NodeJs and hosted on Azure. The database is a MySQL database. The app is available in Dutch and English. The app is also integrated with Intercom, Mixpanel and Clarity. I created this app during my internship at JobFunders. (14 weeks)`,
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['ReactNative', 'Expo', 'Javascript', 'i18next'],
+        },
+        {
+          title: 'Back-end',
+          technologies: ['NodeJs', 'Azure', 'MySQL'],
+        },
+        {
+          title: 'Other',
+          technologies: ['Intercom', 'Mixpanel', 'Clarity'],
+        },
+      ],
+      footnote: 'App:',
+      footnoteLink: (
+        <a href="" target="_blank">
+          Comming soon
+        </a>
+      ),
+    },
+    {
+      visible: true,
       title: 'Industry project',
       paragraph: `Two classmates and I created this website as an Industry project. We got to work with the company Axxes, a IT consultancy. Axxes hosts a yearly conference for their employees, so that they can listen and learn from each other, and they wanted to digitalis this. So it was up to us to create a website, app and backend system, over the corse of 6 weeks.`,
       technologies: [
@@ -273,7 +298,7 @@ function Projects() {
           <div className="flex flex-col md:gap-8 md:flex-row-reverse mt-8">
             <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
               <CloudinaryImage
-                link="AxxesConferenceTool_jxi8d4.png"
+                link="JobFundersAppMockup_ijtjo3.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
@@ -292,10 +317,10 @@ function Projects() {
           </div>
         )}
         {projects[1].visible && (
-          <div className="flex flex-col md:flex-row md:gap-8">
+          <div className="flex flex-col md:gap-8 md:flex-row mt-8">
             <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
               <CloudinaryImage
-                link="PortfolioMockup_qjs7ns.png"
+                link="AxxesConferenceTool_jxi8d4.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
@@ -307,12 +332,34 @@ function Projects() {
                 technologies={projects[1].technologies}
                 footnote={projects[1].footnote}
                 footnoteLink={projects[1].footnoteLink}
+                footnoteTwo={projects[1].footnoteTwo}
+                footnoteLinkTwo={projects[1].footnoteLinkTwo}
               />
             </div>
           </div>
         )}
         {projects[2].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row-reverse">
+          <div className="flex flex-col md:flex-row-reverse md:gap-8">
+            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+              <CloudinaryImage
+                link="PortfolioMockup_qjs7ns.png"
+                alt="Portfolio Mockup"
+                divClass="w-full"
+              />
+            </div>
+            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+              <ProjectInfo
+                title={projects[2].title}
+                paragraph={projects[2].paragraph}
+                technologies={projects[2].technologies}
+                footnote={projects[2].footnote}
+                footnoteLink={projects[2].footnoteLink}
+              />
+            </div>
+          </div>
+        )}
+        {projects[3].visible && (
+          <div className="flex flex-col md:gap-8 md:flex-row">
             <div className="flex w-full pb-4 md:w-1/2 xl:p-12">
               <video
                 title="1VS1"
@@ -333,39 +380,19 @@ function Projects() {
             </div>
             <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
               <ProjectInfo
-                title={projects[2].title}
-                paragraph={projects[2].paragraph}
-                technologies={projects[2].technologies}
-              />
-            </div>
-          </div>
-        )}
-        {projects[3].visible && (
-          <div className="flex flex-col md:flex-row md:gap-8">
-            <div className="w-full pb-4 md:w-1/2 xl:p-12">
-              <video title="Shower monitor" src={ProjectOneDemo} controls>
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
-              <ProjectInfo
                 title={projects[3].title}
                 paragraph={projects[3].paragraph}
                 technologies={projects[3].technologies}
-                footnote={projects[3].footnote}
-                footnoteLink={projects[3].footnoteLink}
               />
             </div>
           </div>
         )}
         {projects[4].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row-reverse">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
-              <CloudinaryImage
-                link="Sportcomplex_jsazvu.png"
-                alt="blackjack"
-                divClass="w-full"
-              />
+          <div className="flex flex-col md:flex-row-reverse md:gap-8">
+            <div className="w-full pb-4 md:w-1/2 xl:p-12">
+              <video title="Shower monitor" src={ProjectOneDemo} controls>
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
               <ProjectInfo
@@ -382,7 +409,7 @@ function Projects() {
           <div className="flex flex-col md:gap-8 md:flex-row">
             <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
               <CloudinaryImage
-                link="Blackjack_rbtyfa.png"
+                link="Sportcomplex_jsazvu.png"
                 alt="blackjack"
                 divClass="w-full"
               />
@@ -394,6 +421,26 @@ function Projects() {
                 technologies={projects[5].technologies}
                 footnote={projects[5].footnote}
                 footnoteLink={projects[5].footnoteLink}
+              />
+            </div>
+          </div>
+        )}
+        {projects[6].visible && (
+          <div className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+              <CloudinaryImage
+                link="Blackjack_rbtyfa.png"
+                alt="blackjack"
+                divClass="w-full"
+              />
+            </div>
+            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+              <ProjectInfo
+                title={projects[6].title}
+                paragraph={projects[6].paragraph}
+                technologies={projects[6].technologies}
+                footnote={projects[6].footnote}
+                footnoteLink={projects[6].footnoteLink}
               />
             </div>
           </div>
