@@ -108,13 +108,42 @@ function Projects() {
     },
     {
       visible: true,
-      title: 'Blackjack',
+      title: 'Sportcomplex',
       paragraph:
-        'I reacreated the popular card game blackjack. Also know as 21.',
+        'This website is a project for our school assignment, focusing on managing a facility. I proposed a sports complex theme, inspired by my passion for swimming. The site enables customers to book either swimming pool sessions or sports halls equipped with various amenities. Additionally, employees have access to log in and view bookings, while administrators can add new staff members and equipment to the system.',
       technologies: [
         {
           title: 'Front-end',
-          technologies: ['HTML', 'CSS', 'Javascript'],
+          technologies: [
+            'Vue',
+            'HTML',
+            'tailwindcss',
+            'Typescript',
+            'i18n',
+            'Vite',
+          ],
+        },
+        {
+          title: 'Back-end',
+          technologies: ['Nodejs', 'Jest', 'Firebase auth', 'Docker'],
+        },
+      ],
+      footnote: 'Website:',
+      footnoteLink: (
+        <a href="https://dynamic-tarsier-0b6360.netlify.app/" target="_blank">
+          Sportcomplex
+        </a>
+      ),
+    },
+    {
+      visible: true,
+      title: 'Blackjack',
+      paragraph:
+        'I recreated the popular card game blackjack. Also know as 21.',
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['HTML', 'Tailwindcss', 'Javascript'],
         },
       ],
       footnote: 'Website:',
@@ -333,7 +362,7 @@ function Projects() {
           <div className="flex flex-col md:gap-8 md:flex-row-reverse">
             <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
               <CloudinaryImage
-                link="Blackjack_rbtyfa.png"
+                link="Sportcomplex_jsazvu.png"
                 alt="blackjack"
                 divClass="w-full"
               />
@@ -345,6 +374,26 @@ function Projects() {
                 technologies={projects[4].technologies}
                 footnote={projects[4].footnote}
                 footnoteLink={projects[4].footnoteLink}
+              />
+            </div>
+          </div>
+        )}
+        {projects[5].visible && (
+          <div className="flex flex-col md:gap-8 md:flex-row">
+            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+              <CloudinaryImage
+                link="Blackjack_rbtyfa.png"
+                alt="blackjack"
+                divClass="w-full"
+              />
+            </div>
+            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+              <ProjectInfo
+                title={projects[5].title}
+                paragraph={projects[5].paragraph}
+                technologies={projects[5].technologies}
+                footnote={projects[5].footnote}
+                footnoteLink={projects[5].footnoteLink}
               />
             </div>
           </div>
