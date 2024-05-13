@@ -14,8 +14,8 @@ function Contact() {
   const navigate = useNavigate();
   const [infoMessage, setInfoMessage] = useState('');
   const [state, handleSubmitFormspree] = useForm("mzbnvgpk");
-  
-  const handleSubmit = async (e:any) => {
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     if (window.confirm('Are you sure you want to submit this form?')) {
@@ -55,7 +55,7 @@ function Contact() {
           <InputField title="Email" id="email" type="email" required={true} placeholder="John.Doe@email.com" maxLenght={50} />
           <InputField title="Subject" id="subject" type="text" maxLenght={100} />
           <InputField title="Message" id="message" type="textarea" maxLenght={500} />
-          <button type="submit" disabled={state.submitting} className="rounded-md py-2 px-8 font-bold w-fit bg-caribbean-current dark:bg-caribbean-current-dark text-white">Submit</button>
+          <button type="submit" disabled={state.submitting} className="rounded-md py-2 px-8 font-bold w-fit bg-caribbean-current dark:bg-caribbean-current-dark text-2xl text-white">Submit</button>
         </form>
       </div>
     </div>

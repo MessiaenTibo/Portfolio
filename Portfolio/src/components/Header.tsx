@@ -6,17 +6,17 @@ import ToggleDarkmode from './ToggleDarkmode';
 
 interface Props {
   title: string,
-  }
+}
 
-export default ({title}:Props) => {
+export default ({ title }: Props) => {
   const [active, setActive] = useState('Home');
 
   useEffect(() => {
-    if(window.location.href.includes('home')) setActive('Home');
-    if(window.location.href.includes('about')) setActive('About me');
-    if(window.location.href.includes('learning')) setActive('Learning Adventure');
-    if(window.location.href.includes('projects')) setActive('Projects');
-    if(window.location.href.includes('contact')) setActive('Contact');
+    if (window.location.href.includes('home')) setActive('Home');
+    if (window.location.href.includes('about')) setActive('About me');
+    if (window.location.href.includes('learning')) setActive('Learning Adventure');
+    if (window.location.href.includes('projects')) setActive('Projects');
+    if (window.location.href.includes('contact')) setActive('Contact');
   }, [])
 
   const selectHome = () => {
@@ -53,40 +53,40 @@ export default ({title}:Props) => {
           {active === 'Learning Adventure' ?
             <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/learning'>Learning Adventure</Link></li> :
             <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/learning' onClick={selectLearning}>Learning Adventure</Link></li>}
-          
+
           {active === 'Projects' ?
             <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/projects'>Projects</Link></li> :
             <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/projects' onClick={selectProjects}>Projects</Link></li>}
           {active === 'Contact' ?
             <li><Link className='p-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark text-orange-peel dark:text-orange-peel-dark' to='/projects'>Contact</Link></li> :
             <li><Link className='p-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark hover:text-caribbean-current dark:hover:text-caribbean-current-dark' to='/contact' onClick={selectContact}>Contact</Link></li>}
-          
+
           <li><ToggleDarkmode /></li>
         </ul>
       </div>
       <div className='flex w-full sm:hidden xl:text-xl'>
         <ul className='flex items-center place-content-around w-full '>
-            {active === 'Home' ?
-              <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/'><Home className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50}/></Link></li> :
-              <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/' onClick={selectHome}><Home className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50}/></Link></li>}
-            {active === 'About me' ?
-              <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/about'><User className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50}/></Link></li> :
-              <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/about' onClick={selectAbout}><User className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50}/></Link></li>}
+          {active === 'Home' ?
+            <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' aria-hidden={true} to='/'><Home className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50} /></Link></li> :
+            <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' aria-hidden={true} to='/' onClick={selectHome}><Home className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50} /></Link></li>}
+          {active === 'About me' ?
+            <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' aria-hidden={true} to='/about'><User className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50} /></Link></li> :
+            <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' aria-hidden={true} to='/about' onClick={selectAbout}><User className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50} /></Link></li>}
 
-            {active === 'Learning Adventure' ?
-              <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/learning'><Scroll className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50}/></Link></li> :
-              <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/learning' onClick={selectLearning}><Scroll className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50}/></Link></li>}
-            
-            {active === 'Projects' ?
-              <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/projects'><Tv2 className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50}/></Link></li> :
-              <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/projects' onClick={selectProjects}><Tv2 className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50}/></Link></li>}
-            
-            {active === 'Contact' ?
-              <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' to='/projects'><Contact className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50}/></Link></li> :
-              <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' to='/contact' onClick={selectContact}><Contact className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50}/></Link></li>}
+          {active === 'Learning Adventure' ?
+            <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' aria-hidden={true} to='/learning'><Scroll className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50} /></Link></li> :
+            <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' aria-hidden={true} to='/learning' onClick={selectLearning}><Scroll className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50} /></Link></li>}
 
-            <li><ToggleDarkmode /></li>
-          </ul>
+          {active === 'Projects' ?
+            <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' aria-hidden={true} to='/projects'><Tv2 className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50} /></Link></li> :
+            <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' aria-hidden={true} to='/projects' onClick={selectProjects}><Tv2 className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50} /></Link></li>}
+
+          {active === 'Contact' ?
+            <li><Link className='py-3 xl:p-4 border-b-4 border-orange-peel dark:border-orange-peel-dark' aria-hidden={true} to='/projects'><Contact className='inline p-2 stroke-orange-peel dark:stroke-orange-peel-dark' size={50} /></Link></li> :
+            <li><Link className='py-3 xl:p-4 hover:border-b-4 border-caribbean-current dark:border-caribbean-current-dark' aria-hidden={true} to='/contact' onClick={selectContact}><Contact className='inline p-2 stroke-caribbean-current dark:stroke-caribbean-current-dark' size={50} /></Link></li>}
+
+          <li><ToggleDarkmode /></li>
+        </ul>
       </div>
     </header>
   );
