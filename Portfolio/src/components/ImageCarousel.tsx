@@ -68,6 +68,7 @@ export default () => {
                 <button
                     onClick={prevImage}
                     className={`absolute left-1 bg-anti-flash-white invisible group-hover:visible dark:bg-anti-flash-white-dark h-20 w-8 flex justify-center items-center border-2 border-caribbean-current dark:border-caribbean-current-dark rounded-sm text-caribbean-current dark:text-caribbean-current-dark opacity-80 transition-opacity`}
+                    aria-label='Previous image button'
                 >
                     <ChevronLeft />
                 </button>
@@ -81,6 +82,7 @@ export default () => {
                 <button
                     onClick={nextImage}
                     className={`absolute right-1 bg-anti-flash-white invisible group-hover:visible dark:bg-anti-flash-white-dark h-20 w-8 flex justify-center items-center border-2 border-caribbean-current dark:border-caribbean-current-dark rounded-sm text-caribbean-current dark:text-caribbean-current-dark opacity-80 transition-opacity`}
+                    aria-label='Next image button'
                 >
                     <ChevronRight />
                 </button>
@@ -90,6 +92,7 @@ export default () => {
                     <button
                         onClick={() => setPlay(false)}
                         className='text-caribbean-current dark:text-caribbean-current-dark'
+                        aria-label='Pause button'
                     >
                         <Pause />
                     </button>
@@ -97,6 +100,7 @@ export default () => {
                     <button
                         onClick={() => setPlay(true)}
                         className='text-caribbean-current dark:text-caribbean-current-dark'
+                        aria-label='Play button'
                     >
                         <Play />
                     </button>
@@ -105,9 +109,8 @@ export default () => {
                     <button
                         onClick={setImage(index)}
                         key={index}
-                        className={`bg-caribbean-current dark:bg-caribbean-current-dark rounded-full h-4 w-4 ${
-                            index === current ? 'opacity-100' : 'opacity-30'
-                        }`}
+                        className={`bg-caribbean-current dark:bg-caribbean-current-dark rounded-full h-4 w-4 ${index === current ? 'opacity-100' : 'opacity-30'}`}
+                        aria-label={`Image ${index + 1} button`}
                     ></button>
                 ))}
             </div>
