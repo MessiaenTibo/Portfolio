@@ -1,20 +1,18 @@
 BEGIN:VCARD
 VERSION:2.1
-N:messiaen;Tibo
-FN:Tibo messiaen
+N;LANGUAGE=nl-be:Messiaen;Tibo
+FN:Tibo Messiaen
 NOTE:Full stack web & app developer
-TEL;CELL;VOICE:+32 471 62 09 82
 ADR;HOME;PREF:;;;West-Vlaanderen - Belgium;;;Belgium
-LABEL;HOME;PREF:West-Vlaanderen - Belgium
-X-MS-OL-DEFAULT-POSTAL-ADDRESS:1
-URL;HOME:https://tibomessiaen.netlify.app
+X-MS-OL-DEFAULT-POSTAL-ADDRESS:0
+URL;WORK:https://tibomessiaen.netlify.app/
 BDAY:20030226
-EMAIL;PREF;INTERNET:tibo.messiaen@student.howest.be
+EMAIL;PREF;INTERNET:tibomessiaen@gmail.com
 X-MS-CARDPICTURE;TYPE=JPEG;ENCODING=BASE64:
- /9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUa
+ /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAcFBQYFBAcGBQYIBwcIChELCgkJChUPEAwRGBUa
  GRgVGBcbHichGx0lHRcYIi4iJSgpKywrGiAvMy8qMicqKyr/2wBDAQcICAoJChQLCxQqHBgc
  KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKir/wAAR
- CACUACcDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAA
+ CACEAB8DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAA
  AgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkK
  FhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWG
  h4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl
@@ -22,15 +20,13 @@ X-MS-CARDPICTURE;TYPE=JPEG;ENCODING=BASE64:
  AgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYk
  NOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOE
  hYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk
- 5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3gctQxJ70dBmkPegBB1qdOFqFeTU7Hah+
- lAFaT55OKKWMZYmigB5GBTT0oJzQaAHRD5qdKfkpYxxmo5zl8CgAj4XNFDHCAUUAJQOtBpUG
- TQBOowtVicy1Zc4iqvHy5NABMcECimSHLUUASGnx8UzvUsY+XNADZzximoMITTZW3Pin4yuK
- AIGPzUVNtVfvUUAIo5qYH5cCkGzsKRyQOOKAE2oG+brTZHI4HSkTluabJy1ADGJPeigj0ooA
- sxiklOcCnoMCo3ALZJ/CgBI+FOevamlOctxUgYCPHeoSc9TQAu5RwBmimHmigC4/yqKgHzNU
- sxwuKjjGTQAshwo9ahqSQ80ygBp60UHrRQBYlOXpE6U1zlqcOEoAjf71JQeaKAGnrRQetFAE
- u0nFPfpQrZzntSsw6GgCvRmpcK3SmlM0ARminmP0ooAfH3of7/4UUUARjpRkjkUUUAHmNRRR
- QB//2Q==
+ 5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD37zMsQKGkVB6moR3NNNAEisZH56elJO2A
+ AKdEO9RyfPNj0oAU9BTT2pxOTSDlqAJl+VP1qGMZYk1LKdsf6VEOIvc0AFPiGWphqaIYGaAG
+ XB5AFMl4VRSt883tmmSnL0AP71KPljyfSolGTzUrjeuB09aAIo+pJpvls7Z6VJhY14+aonkZ
+ qALC7T91ajlJzjP4VIg+WovvyfjQAScIBURHpU0mN3zdfQVGXI+7wPagCy3yJ+FRqSx6/TFO
+ nPQU1eEzQBG5yxph606mnrQBPKcuaH4jpuNzj3okPSgBlNPWnU09aALCheopHTJ4NCcDJ9c1
+ Gf60ABQimlSOop24+tHmH0FAEp4j/Coj0oooASmnrRRQB//Z
 
-X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="fit" area="16" use="cardpicture"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="telcell" align="left" dir="ltr" color="d48d2a" size="8"><label align="right" color="626262">Mobile</label></fld><fld xmlns="" prop="email" align="left" dir="ltr" color="d48d2a" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="addrhome" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="webhome" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
-REV:20230425T102237Z
+X-MS-OL-DESIGN;CHARSET=utf-8:<card xmlns="http://schemas.microsoft.com/office/outlook/12/electronicbusinesscards" ver="1.0" layout="left" bgcolor="ffffff"><img xmlns="" align="fit" area="16" use="cardpicture"/><fld xmlns="" prop="name" align="left" dir="ltr" style="b" color="000000" size="10"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="email" align="left" dir="ltr" color="d48d2a" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="webwork" align="left" dir="ltr" color="000000" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/><fld xmlns="" prop="blank" size="8"/></card>
+REV:20240513T193414Z
 END:VCARD
