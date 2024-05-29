@@ -89,7 +89,7 @@ const App: React.FC = () => {
   return (
     <div className='relative overflow-hidden'>
       {/* Background (workaround background for the backgroundimage) */}
-      <div className='bg-white dark:bg-dark fixed h-screen w-screen -z-10'></div>
+      <div className=' bg-anti-flash-white dark:bg-anti-flash-white-dark fixed h-screen w-screen -z-10'></div>
 
       {/* Container for animations */}
       <div className='absolute top-0 left-0 w-full h-full pointer-events-none'>
@@ -109,7 +109,7 @@ const App: React.FC = () => {
         {animationsTwo.map((animation) => (
           <div
             key={animation.id}
-            className='BackgroundAnimation rounded-full bg-white dark:bg-dark absolute motion-reduce:hidden'
+            className='BackgroundAnimation rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark  absolute motion-reduce:hidden'
             style={{
               top: animation.y - animation.size / 2,
               left: animation.x - animation.size / 2,
