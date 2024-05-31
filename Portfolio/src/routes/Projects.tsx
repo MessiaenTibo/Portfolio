@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import TeamProject1vs1Demo from '../assets/videos/TeamProject1vs1Demo.mp4';
 import TeamProjectShuttleRunDemo from '../assets/videos/TeamProjectShuttleRunDemo.mp4';
 import ProjectOneDemo from '../assets/videos/ProjectOneDemo.mp4';
+import LedMatrixDemo from '../assets/videos/LedMatrixDemo.mp4';
 
 // Components
 import Title from '../components/Title';
@@ -161,6 +162,35 @@ function Projects() {
       footnoteLink: (
         <a href="https://dynamic-tarsier-0b6360.netlify.app/" target="_blank">
           Sportcomplex
+        </a>
+      ),
+    },
+    {
+      visible: true,
+      title: 'Multifunctional LED Matrix',
+      paragraph:
+        'Me and a good friend have created a LED Matrix Clock. This was a scool project in high school to demonstrate our knowledge of electronics and programming. We designed custom PCBs, soldered the components and programmed the clock. The display is a 32*64 LED matrix. The display is controlled by a custom PCB that connects with a windows application over bluetooth. This application can set the time, text and color of the display. It is even possible to play the game snake on the display.',
+      technologies: [
+        {
+          title: 'Windows application',
+          technologies: ['C#', 'Bluetooth', 'Windows Forms App (.NET Framework)'],
+        },
+        {
+          title: 'Hardware',
+          technologies: ['LED Matrix', 'PCB', '5V@10A Powersuply', '3D printed case'],
+        },
+        {
+          title: 'PCB',
+          technologies: ['Atmega324p Microcontroller', 'RN42 Bluetooth Module', 'C']
+        },
+      ],
+      footnote: 'Blog:',
+      footnoteLink: (
+        <a
+          href="https://messiaentibo.github.io/Interaction-Design-Eindopdracht/"
+          target="_blank"
+        >
+          Multifunctional LED Matrix
         </a>
       ),
     },
@@ -431,6 +461,29 @@ function Projects() {
         )}
         {projects[6].visible && (
           <div className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className="flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12">
+              <video
+                title="1VS1"
+                className="xl:w-1/2 p-2"
+                src={LedMatrixDemo}
+                controls
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+              <ProjectInfo
+                title={projects[6].title}
+                paragraph={projects[6].paragraph}
+                technologies={projects[6].technologies}
+                footnote={projects[6].footnote}
+                footnoteLink={projects[6].footnoteLink}
+              />
+            </div>
+          </div>
+        )}
+        {projects[7].visible && (
+          <div className="flex flex-col md:gap-8 md:flex-row">
             <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
               <CloudinaryImage
                 link="Blackjack_rbtyfa.png"
@@ -440,11 +493,11 @@ function Projects() {
             </div>
             <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
               <ProjectInfo
-                title={projects[6].title}
-                paragraph={projects[6].paragraph}
-                technologies={projects[6].technologies}
-                footnote={projects[6].footnote}
-                footnoteLink={projects[6].footnoteLink}
+                title={projects[7].title}
+                paragraph={projects[7].paragraph}
+                technologies={projects[7].technologies}
+                footnote={projects[7].footnote}
+                footnoteLink={projects[7].footnoteLink}
               />
             </div>
           </div>
