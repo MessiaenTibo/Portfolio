@@ -113,6 +113,16 @@ module.exports = {
           '0%': { transform: 'scale(0)' },
           '100%': { transform: 'scale(1)' },
         },
+        'fade-in-from-left': {
+          '0%': { opacity: '0', transform: 'translateX(-100%)' },
+          '80%': { opacity: '0.8', transform: 'translateX(0)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'fade-in-from-right': {
+          '0%': { opacity: '0', transform: 'translateX(100%)' },
+          '80%': { opacity: '0.8', transform: 'translateX(0)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 10s linear infinite',
@@ -123,6 +133,9 @@ module.exports = {
         'twinkel-bright-slow': 'twinkel-bright 8s ease-in-out infinite',
         'twinkel-bright-medium': 'twinkel-bright 6s ease-in-out infinite',
         'twinkel-bright-fast': 'twinkel-bright 4s ease-in-out infinite',
+        'screen-apear': 'screen-apear 0.5s ease-in-out',
+        'fade-in-from-left': 'fade-in-from-left 0.75s ease-out',
+        'fade-in-from-right': 'fade-in-from-right 0.75s ease-out',
       },
     },
   },

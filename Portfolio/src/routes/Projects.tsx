@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Videos
 import TeamProject1vs1Demo from '../assets/videos/TeamProject1vs1Demo.mp4';
@@ -12,6 +12,7 @@ import ProjectInfo from '../components/ProjectInfo';
 import CloudinaryImage from '../components/CloudinaryImage';
 import ScrollArrow from '../components/ScrollArrow';
 
+
 function Projects() {
   useEffect(() => {
     document.title = 'Tibo Messiaen | Projects';
@@ -22,6 +23,8 @@ function Projects() {
 
   const [projects, setProjects] = useState([
     {
+      id: 1,
+      appearedOnScreen: false,
       visible: true,
       title: 'JobFunders Mobile App',
       paragraph: `I created the frontend of the JobFunders mobile app. JobFunders is a platform that connects job seekers with companies. The app is built with ReactNative and Expo. The backend is built with NodeJs and hosted on Azure. The database is a MySQL database. The app is available in Dutch and English. The app is also integrated with Intercom, Mixpanel and Clarity. I created this app during my internship at JobFunders. (14 weeks)`,
@@ -47,6 +50,8 @@ function Projects() {
       ),
     },
     {
+      id: 2,
+      appearedOnScreen: false,
       visible: true,
       title: 'Industry project',
       paragraph: `Two classmates and I created this website as an Industry project. We got to work with the company Axxes, a IT consultancy. Axxes hosts a yearly conference for their employees, so that they can listen and learn from each other, and they wanted to digitalis this. So it was up to us to create a website, app and backend system, over the corse of 6 weeks.`,
@@ -81,6 +86,8 @@ function Projects() {
       ),
     },
     {
+      id: 3,
+      appearedOnScreen: false,
       visible: true,
       title: 'Portfolio',
       paragraph: 'I created my own website portfolio',
@@ -102,6 +109,8 @@ function Projects() {
       ),
     },
     {
+      id: 4,
+      appearedOnScreen: false,
       visible: true,
       title: 'Team project',
       paragraph:
@@ -119,6 +128,8 @@ function Projects() {
       ],
     },
     {
+      id: 5,
+      appearedOnScreen: false,
       visible: true,
       title: 'Project One',
       paragraph: 'Dit is project one!',
@@ -137,6 +148,8 @@ function Projects() {
       ),
     },
     {
+      id: 6,
+      appearedOnScreen: false,
       visible: true,
       title: 'Sportcomplex',
       paragraph:
@@ -166,6 +179,8 @@ function Projects() {
       ),
     },
     {
+      id: 7,
+      appearedOnScreen: false,
       visible: true,
       title: 'Multifunctional LED Matrix',
       paragraph:
@@ -195,6 +210,8 @@ function Projects() {
       ),
     },
     {
+      id: 8,
+      appearedOnScreen: false,
       visible: true,
       title: 'Blackjack',
       paragraph:
@@ -216,6 +233,57 @@ function Projects() {
       ),
     },
   ]);
+
+  const project0Ref = useRef<HTMLDivElement>(null);
+  const project1Ref = useRef<HTMLDivElement>(null);
+  const project2Ref = useRef<HTMLDivElement>(null);
+  const project3Ref = useRef<HTMLDivElement>(null);
+  const project4Ref = useRef<HTMLDivElement>(null);
+  const project5Ref = useRef<HTMLDivElement>(null);
+  const project6Ref = useRef<HTMLDivElement>(null);
+  const project7Ref = useRef<HTMLDivElement>(null);
+
+  // Observer for projects to show fade in animation on screen appear
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = Number(entry.target.getAttribute('data-id'));
+          setProjects((prevProjects) =>
+            prevProjects.map((project) =>
+              project.id === id
+                ? { ...project, appearedOnScreen: true }
+                : project
+            )
+          );
+        }
+      });
+    }, {
+      threshold: 0.2 // Trigger when 20% of the element is visible
+    });
+
+    const projectRefs = [
+      project0Ref,
+      project1Ref,
+      project2Ref,
+      project3Ref,
+      project4Ref,
+      project5Ref,
+      project6Ref,
+      project7Ref,
+    ];
+
+    projectRefs.forEach((ref, index) => {
+      if (ref.current) {
+        ref.current.setAttribute('data-id', (index + 1).toString());
+        observer.observe(ref.current);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     // Check if there are no search queries
@@ -329,15 +397,17 @@ function Projects() {
 
       <div className=" min-h-screen">
         {projects[0].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row-reverse mt-8">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project0Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse mt-8">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[0].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <CloudinaryImage
                 link="JobFundersAppMockup_ijtjo3.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[0].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[0].title}
                 paragraph={projects[0].paragraph}
@@ -351,15 +421,17 @@ function Projects() {
           </div>
         )}
         {projects[1].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row mt-8">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project1Ref}
+            className="flex flex-col md:gap-8 md:flex-row mt-8">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[1].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
                 link="AxxesConferenceTool_jxi8d4.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[1].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[1].title}
                 paragraph={projects[1].paragraph}
@@ -373,15 +445,17 @@ function Projects() {
           </div>
         )}
         {projects[2].visible && (
-          <div className="flex flex-col md:flex-row-reverse md:gap-8">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project2Ref}
+            className="flex flex-col md:flex-row-reverse md:gap-8">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[2].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <CloudinaryImage
                 link="PortfolioMockup_qjs7ns.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[2].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[2].title}
                 paragraph={projects[2].paragraph}
@@ -393,8 +467,10 @@ function Projects() {
           </div>
         )}
         {projects[3].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row">
-            <div className="flex w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project3Ref}
+            className="flex flex-col md:gap-8 md:flex-row">
+            <div className={`flex w-full pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <video
                 title="1VS1"
                 className="xl:w-1/2 p-2"
@@ -412,7 +488,7 @@ function Projects() {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[3].title}
                 paragraph={projects[3].paragraph}
@@ -422,13 +498,15 @@ function Projects() {
           </div>
         )}
         {projects[4].visible && (
-          <div className="flex flex-col md:flex-row-reverse md:gap-8">
-            <div className="w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project4Ref}
+            className="flex flex-col md:flex-row-reverse md:gap-8">
+            <div className={`w-full pb-4 md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video title="Shower monitor" src={ProjectOneDemo} controls>
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[4].title}
                 paragraph={projects[4].paragraph}
@@ -440,15 +518,17 @@ function Projects() {
           </div>
         )}
         {projects[5].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project5Ref}
+            className="flex flex-col md:gap-8 md:flex-row">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
                 link="Sportcomplex_jsazvu.png"
                 alt="blackjack"
                 divClass="w-full"
               />
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[5].title}
                 paragraph={projects[5].paragraph}
@@ -460,8 +540,10 @@ function Projects() {
           </div>
         )}
         {projects[6].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row-reverse">
-            <div className="flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project6Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className={`flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video
                 title="1VS1"
                 className="xl:w-1/2 p-2"
@@ -471,7 +553,7 @@ function Projects() {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[6].title}
                 paragraph={projects[6].paragraph}
@@ -483,15 +565,17 @@ function Projects() {
           </div>
         )}
         {projects[7].visible && (
-          <div className="flex flex-col md:gap-8 md:flex-row">
-            <div className="flex items-center w-full pb-4 md:w-1/2 xl:p-12">
+          <div
+            ref={project7Ref}
+            className="flex flex-col md:gap-8 md:flex-row">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
                 link="Blackjack_rbtyfa.png"
                 alt="blackjack"
                 divClass="w-full"
               />
             </div>
-            <div className="w-full pb-12 md:w-1/2 place-self-center xl:p-12">
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[7].title}
                 paragraph={projects[7].paragraph}
