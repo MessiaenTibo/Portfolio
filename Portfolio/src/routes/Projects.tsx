@@ -283,7 +283,7 @@ function Projects() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [projects]);
 
   useEffect(() => {
     // Check if there are no search queries
