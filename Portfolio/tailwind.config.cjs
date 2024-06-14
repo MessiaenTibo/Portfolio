@@ -127,6 +127,11 @@ module.exports = {
           '80%': { opacity: '0.8', transform: 'translateX(0)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
+        'fade-in-from-bottom': {
+          '0%': { opacity: '0', transform: 'translateY(100%)' },
+          '80%': { opacity: '0.8', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 10s linear infinite',
@@ -147,6 +152,7 @@ module.exports = {
         'fade-in-from-left-3': 'fade-in-from-left 1s ease-out',
         'fade-in-from-left-4': 'fade-in-from-left 1.25s ease-out',
         'fade-in-from-right': 'fade-in-from-right 0.75s ease-out',
+        'fade-in-from-bottom': 'fade-in-from-bottom 1s ease-out',
       },
     },
   },
