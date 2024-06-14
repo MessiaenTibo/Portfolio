@@ -48,14 +48,26 @@ function Contact() {
           className="flex flex-col items-center gap-4 w-full bg-white dark:bg-dark p-4 sm:px-6 sm:border-l-8 border-caribbean-current dark:border-caribbean-current-dark"
         >
           <h1 className="text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl">Contact</h1>
-          <div className="flex flex-col gap-4 w-full md:flex-row">
-            <InputField title="Firstname" id="firstname" type="text" required={true} placeholder="John" maxLenght={20} />
-            <InputField title="Lastname" id="lastname" type="text" required={true} placeholder="Doe" maxLenght={20} />
+          <div className="flex flex-col gap-4 w-full md:flex-row md:motion-safe:animate-fade-in-very-fast">
+            <div className=' w-full motion-safe:animate-fade-in-from-top-0'>
+              <InputField title="Firstname" id="firstname" type="text" required={true} placeholder="John" maxLenght={20} />
+            </div>
+            <div className=' w-full motion-safe:animate-fade-in-from-top-1 md:animate-fade-in-very-fast'>
+              <InputField title="Lastname" id="lastname" type="text" required={true} placeholder="Doe" maxLenght={20} />
+            </div>
           </div>
-          <InputField title="Email" id="email" type="email" required={true} placeholder="John.Doe@email.com" maxLenght={50} />
-          <InputField title="Subject" id="subject" type="text" maxLenght={100} />
-          <InputField title="Message" id="message" type="textarea" maxLenght={500} />
-          <button type="submit" disabled={state.submitting} className="rounded-md py-2 px-8 font-bold w-fit bg-caribbean-current dark:bg-caribbean-current-dark text-2xl text-white">Submit</button>
+          <div className='w-full motion-safe:animate-fade-in-fast'>
+            <InputField title="Email" id="email" type="email" required={true} placeholder="John.Doe@email.com" maxLenght={50} />
+          </div>
+          <div className='w-full motion-safe:animate-fade-in-medium'>
+            <InputField title="Subject" id="subject" type="text" maxLenght={100} />
+          </div>
+          <div className='w-full motion-safe:animate-fade-in-slow'>
+            <InputField title="Message" id="message" type="textarea" maxLenght={500} />
+          </div>
+          <div className='motion-safe:animate-fade-in-very-slow'>
+            <button type="submit" disabled={state.submitting} className="rounded-md py-2 px-8 font-bold w-fit bg-caribbean-current dark:bg-caribbean-current-dark text-2xl text-white">Submit</button>
+          </div>
         </form>
       </div>
     </div>

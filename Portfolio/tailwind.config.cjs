@@ -132,6 +132,11 @@ module.exports = {
           '80%': { opacity: '0.8', transform: 'translateY(0)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'fade-in-from-top': {
+          '0%': { opacity: '0', transform: 'translateY(-100%)' },
+          '80%': { opacity: '0.8', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 10s linear infinite',
@@ -143,9 +148,11 @@ module.exports = {
         'twinkel-bright-medium': 'twinkel-bright 6s ease-in-out infinite',
         'twinkel-bright-fast': 'twinkel-bright 4s ease-in-out infinite',
         'screen-apear': 'screen-apear 0.5s ease-in-out',
+        'fade-in-very-slow': 'fade-in 2s ease-in',
         'fade-in-slow': 'fade-in 1.5s ease-in',
         'fade-in-medium': 'fade-in 1s ease-in',
         'fade-in-fast': 'fade-in 0.5s ease-in',
+        'fade-in-very-fast': 'fade-in 0.25s ease-in',
         'fade-in-from-left': 'fade-in-from-left 0.75s ease-out',
         'fade-in-from-left-1': 'fade-in-from-left 0.5s ease-out',
         'fade-in-from-left-2': 'fade-in-from-left 0.75s ease-out',
