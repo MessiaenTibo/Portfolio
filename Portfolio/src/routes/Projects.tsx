@@ -39,13 +39,19 @@ function Projects() {
         },
         {
           title: 'Other',
-          technologies: ['Intercom', 'Mixpanel', 'Clarity'],
+          technologies: ['Intercom', 'Mixpanel', 'Rollbar', 'Clarity'],
         },
       ],
-      footnote: 'App:',
+      footnote: 'Google Play:',
       footnoteLink: (
-        <a href="" target="_blank">
-          Comming soon
+        <a href="https://play.google.com/store/apps/details?id=com.jobfunders.app&pli=1" target="_blank">
+          JobFunders
+        </a>
+      ),
+      footnoteTwo: 'App Store:',
+      footnoteLinkTwo: (
+        <a href="https://apps.apple.com/us/app/jobfunders/id6475038222" target="_blank">
+          JobFunders
         </a>
       ),
     },
