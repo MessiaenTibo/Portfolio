@@ -1,7 +1,7 @@
 import { FileDown, Github, Send, Linkedin, Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
 
 import profileIcon from '../assets/imgs/profileIcon.png'
-import cv from '../assets/pdfs/Tibo_Messiaen_CV.pdf'
+import cv from '../assets/pdfs/Curriculum_vitae.pdf'
 import ContactInfo from '../components/ContactInfo';
 import EducationInfo from '../components/EducationInfo';
 import Title from '../components/Title';
