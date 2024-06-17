@@ -26,19 +26,19 @@ export default () => {
             <h2 className='text-xl font-bold mb-4'>My hobbies</h2>
             <div className='flex flex-wrap'>
               <div className='flex items-center motion-safe:animate-fade-in-from-left-1'>
-                <Code2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Code2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-14 xsm:w-14' />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Code</h2>
               </div>
               <div className='flex items-center motion-safe:animate-fade-in-from-left-2'>
-                <Waves className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Waves className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-14 xsm:w-14' />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Swimming</h2>
               </div>
               <div className='flex items-center motion-safe:animate-fade-in-from-left-3'>
-                <Target className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Target className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-14 xsm:w-14' />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Darts</h2>
               </div>
               <div className='flex items-center motion-safe:animate-fade-in-from-left-4'>
-                <Gamepad2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-16 xsm:w-16' size={50} />
+                <Gamepad2 className='stroke-orange-peel dark:stroke-orange-peel-dark rounded-full bg-anti-flash-white dark:bg-anti-flash-white-dark p-2  m-2 xsm:h-14 xsm:w-14' />
                 <h2 className=' pl-2 pr-4 xsm:text-xl'>Gaming</h2>
               </div>
             </div>
