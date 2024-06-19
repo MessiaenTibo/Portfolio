@@ -36,8 +36,8 @@ export default ({ title, paragraph, technologies, footnote, footnoteLink, footno
 
                 </div>
             </div>
-            <p className="flex gap-1.5">{footnote}<p className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLink}</p></p>
-            <p className="flex gap-1.5">{footnoteTwo}<p className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLinkTwo}</p></p>
+            <p className="flex gap-1.5">{footnote}<span className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLink}</span></p>
+            <p className="flex gap-1.5">{footnoteTwo}<span className='underline text-caribbean-current dark:text-caribbean-current-dark hover:text-orange-peel dark:hover:text-orange-peel-dark'>{footnoteLinkTwo}</span></p>
         </div>
     );
 };
