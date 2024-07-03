@@ -18,8 +18,8 @@ function Home() {
 
       <Title title="Welcome" typeAnimation={true} />
 
-      <p className='text-center text-sm px-4 pb-4 max-w-lg m-auto xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
-        Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I am currently studying at Howest in Kortrijk, Belgium. I am a hard working person and I am always willing to learn new things.
+      <p className='text-center text-sm px-4 pb-4 max-w-lg m-auto xl:p-0 xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
+        Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I have a Bachelor's degree in Multimedia and Creative Technologies. I am a hardworking individual and always eager to learn new things.
       </p>
 
       <a href={cv} target="_blank" className='flex place-items-center place-content-center bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 hover:text-orange-peel dark:hover:text-orange-peel-dark'>
