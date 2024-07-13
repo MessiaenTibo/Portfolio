@@ -208,7 +208,7 @@ function Projects() {
       footnote: 'Blog:',
       footnoteLink: (
         <a
-          href="https://messiaentibo.github.io/Interaction-Design-Eindopdracht/"
+          href="https://giptibomessiaen.wordpress.com/"
           target="_blank"
         >
           Multifunctional LED Matrix
