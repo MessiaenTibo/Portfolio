@@ -122,14 +122,17 @@ function Projects() {
       paragraph:
         'We created this project in team. The assignment was to create an interactive game with poles. The main goal was to make people move. With the focus on children (age 8-18). I designed and created the website, I also handled the communication with the backend.',
       technologies: [
-        { title: 'Design', technologies: ['Adobe XD', 'Photoshop'] },
         {
           title: 'Front-end',
           technologies: ['HTML', 'CSS', 'Javascript'],
         },
         {
           title: 'Back-end',
-          technologies: ['HTTP', 'MQTT', 'Socket IO'],
+          technologies: ['Python', 'HTTP', 'MQTT', 'Socket IO', 'MySQL'],
+        },
+        {
+          title: 'Design',
+          technologies: ['Adobe XD', 'Photoshop', 'FreePik']
         },
       ],
     },
@@ -138,10 +141,11 @@ function Projects() {
       appearedOnScreen: false,
       visible: true,
       title: 'Project One',
-      paragraph: 'Dit is project one!',
+      paragraph: 'I created a water shower monitor. This monitor shows the the users how much water they use during a shower. The monitor also shows the temperature and humidity of the room. The monitor is connected to the internet and can be viewed on a website. A user can set a goal for the amount of water they want to use during a shower. The Led circle is a visible representation of how much water you have used of the set goal while showering.',
       technologies: [
-        { title: 'Front-end', technologies: ['HTML', 'CSS'] },
-        { title: 'Back-end', technologies: ['C#', '.NET'] },
+        { title: 'Front-end', technologies: ['HTML', 'CSS', 'Javascript', 'Chart.js'] },
+        { title: 'Back-end', technologies: ['C#', 'MySQL', 'Python', 'Socket IO'] },
+        { title: 'Hardware', technologies: ['Raspberry Pi 4', 'Water Flow Sensor', 'Humidity Sensor', 'Temperature sensor', 'Magnetic Contacts', 'LED Screen', 'Neopixel Ledcircle'] },
       ],
       footnote: 'Instructables:',
       footnoteLink: (
