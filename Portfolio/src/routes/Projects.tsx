@@ -5,12 +5,16 @@ import TeamProject1vs1Demo from '../assets/videos/TeamProject1vs1Demo.mp4';
 import TeamProjectShuttleRunDemo from '../assets/videos/TeamProjectShuttleRunDemo.mp4';
 import ProjectOneDemo from '../assets/videos/ProjectOneDemo.mp4';
 import LedMatrixDemo from '../assets/videos/LedMatrixDemo.mp4';
+import EyeTrackingDemo from '../assets/videos/Eye-trackingDemo.mp4';
 
 // Components
 import Title from '../components/Title';
 import ProjectInfo from '../components/ProjectInfo';
 import CloudinaryImage from '../components/CloudinaryImage';
 import ScrollArrow from '../components/ScrollArrow';
+
+// PDFs
+import thesis from '../assets/pdfs/Bachelor_thesis.pdf';
 
 
 function Projects() {
@@ -223,6 +227,46 @@ function Projects() {
       id: 8,
       appearedOnScreen: false,
       visible: true,
+      title: 'Eye Tracking',
+      paragraph:
+        'I researched the possibilities of controlling a website with eye tracking. I created a Chrome-extension that uses the webcam to track the users eyes. The extension works with all websites and starts working when opened. The user can click, double click, scroll and navigate back with eye blinking. This was a research project for my bachelor thesis about "Can eye movement and blinking via a Chrome-extension be translated to website interactions?".',
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['HTML', 'CSS', 'Javascript', 'Chrome-extension', 'Chrome Storage API'],
+        },
+        {
+          title: 'Back-end',
+          technologies: ['GazeCloudAPI', 'MediaPipe (FaceLandMarker)'],
+        },
+        {
+          title: 'Researched and tested (not implemented in final product)',
+          technologies: ['WebGazer.js', 'OpenCv (dlib)'],
+        },
+      ],
+      footnote: 'Github:',
+      footnoteLink: (
+        <a
+          href="https://github.com/MessiaenTibo/ResearchProject"
+          target="_blank"
+        >
+          ResearchProject
+        </a>
+      ),
+      footnoteTwo: 'Thesis:',
+      footnoteLinkTwo: (
+        <a
+          href={thesis}
+          target="_blank"
+        >
+          Bachelor thesis (Dutch)
+        </a>
+      ),
+    },
+    {
+      id: 9,
+      appearedOnScreen: false,
+      visible: true,
       title: 'Blackjack',
       paragraph:
         'I recreated the popular card game blackjack. Also know as 21.',
@@ -252,6 +296,7 @@ function Projects() {
   const project5Ref = useRef<HTMLDivElement>(null);
   const project6Ref = useRef<HTMLDivElement>(null);
   const project7Ref = useRef<HTMLDivElement>(null);
+  const project8Ref = useRef<HTMLDivElement>(null);
 
   // Observer for projects to show fade in animation on screen appear
   useEffect(() => {
@@ -281,6 +326,7 @@ function Projects() {
       project5Ref,
       project6Ref,
       project7Ref,
+      project8Ref,
     ];
 
     projectRefs.forEach((ref, index) => {
@@ -511,7 +557,7 @@ function Projects() {
           <div
             ref={project4Ref}
             className="flex flex-col md:flex-row-reverse md:gap-8">
-            <div className={`w-full pb-4 md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video title="Shower monitor" src={ProjectOneDemo} controls>
                 Your browser does not support the video tag.
               </video>
@@ -578,12 +624,10 @@ function Projects() {
           <div
             ref={project7Ref}
             className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
-              <CloudinaryImage
-                link="BlackJack_iyxgmg.png"
-                alt="blackjack"
-                divClass="w-full"
-              />
+            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <video title="Shower monitor" src={EyeTrackingDemo} controls>
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
@@ -592,6 +636,30 @@ function Projects() {
                 technologies={projects[7].technologies}
                 footnote={projects[7].footnote}
                 footnoteLink={projects[7].footnoteLink}
+                footnoteTwo={projects[7].footnoteTwo}
+                footnoteLinkTwo={projects[7].footnoteLinkTwo}
+              />
+            </div>
+          </div>
+        )}
+        {projects[8].visible && (
+          <div
+            ref={project8Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <CloudinaryImage
+                link="BlackJack_iyxgmg.png"
+                alt="blackjack"
+                divClass="w-full"
+              />
+            </div>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <ProjectInfo
+                title={projects[8].title}
+                paragraph={projects[8].paragraph}
+                technologies={projects[8].technologies}
+                footnote={projects[8].footnote}
+                footnoteLink={projects[8].footnoteLink}
               />
             </div>
           </div>
