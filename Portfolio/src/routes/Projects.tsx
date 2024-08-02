@@ -96,7 +96,7 @@ function Projects() {
       appearedOnScreen: false,
       visible: true,
       title: 'Portfolio',
-      paragraph: 'I created my own website portfolio',
+      paragraph: 'I created this portfolio website to showcase my projects and skills. The website is built with React and is hosted on Netlify. I also added a darkmode, animations that are hidden when the user prefers reduced motion and a search function to filter the projects. Also all the images are optimized with Cloudinary to get the best website preformance and a almost perfect lighthouse score.',
       technologies: [
         {
           title: 'Front-end',
@@ -104,7 +104,7 @@ function Projects() {
         },
         {
           title: 'Other',
-          technologies: ['Cloudinary', 'Netlify', 'For'],
+          technologies: ['Cloudinary', 'Netlify', 'Formspree'],
         },
       ],
       footnote: 'Website:',
