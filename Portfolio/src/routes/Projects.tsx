@@ -580,7 +580,7 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="Blackjack_rbtyfa.png"
+                link="BlackJack_iyxgmg.png"
                 alt="blackjack"
                 divClass="w-full"
               />
