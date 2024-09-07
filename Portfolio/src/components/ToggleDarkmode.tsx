@@ -13,9 +13,26 @@ export default () => {
 
     useEffect(() => {
         const darkModeOn = localStorage.getItem('darkMode');
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        const navbuttonColor = document.querySelector('meta[name="msapplication-navbutton-color"]');
+        const TitleColor = document.querySelector('meta[name="msapplication-TileColor"]');
+
         if (darkModeOn) {
             setDarkMode(JSON.parse(darkModeOn));
             document.documentElement.classList.toggle('dark', JSON.parse(darkModeOn));
+            // Set the color based on the dark mode
+            if (themeColor) themeColor.setAttribute(
+                'content',
+                JSON.parse(darkModeOn) ? '#02020A' : '#ffffff'
+            );
+            if (navbuttonColor) navbuttonColor.setAttribute(
+                'content',
+                JSON.parse(darkModeOn) ? '#02020A' : '#ffffff'
+            );
+            if (TitleColor) TitleColor.setAttribute(
+                'content',
+                JSON.parse(darkModeOn) ? '#02020A' : '#ffffff'
+            );
         } else {
             // Set dark mode based on the system preferences
             const darkModeOn = window.matchMedia(
@@ -23,6 +40,21 @@ export default () => {
             ).matches;
             setDarkMode(darkModeOn);
             document.documentElement.classList.toggle('dark', darkModeOn);
+            // Get the meta tag with name="theme-color"
+            const themeColor = document.querySelector('meta[name="theme-color"]');
+            // Set the color based on the dark mode
+            if (themeColor) themeColor.setAttribute(
+                'content',
+                darkModeOn ? '#02020A' : '#ffffff'
+            );
+            if (navbuttonColor) navbuttonColor.setAttribute(
+                'content',
+                darkModeOn ? '#02020A' : '#ffffff'
+            );
+            if (TitleColor) TitleColor.setAttribute(
+                'content',
+                darkModeOn ? '#02020A' : '#ffffff'
+            );
         }
     }, []);
 
