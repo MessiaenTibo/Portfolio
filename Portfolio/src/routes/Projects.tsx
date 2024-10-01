@@ -267,13 +267,36 @@ function Projects() {
       id: 9,
       appearedOnScreen: false,
       visible: true,
+      title: 'Sorting Algorithms',
+      paragraph:
+        'This website is a visual representation of the most common sorting algorithms. The user can see how the algorithms work and how they compare to each other.',
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['HTML', 'Tailwindcss', 'Javascript'],
+        },
+      ],
+      footnote: 'Website:',
+      footnoteLink: (
+        <a
+          href="https://sorting-algorithms-visuals.netlify.app/"
+          target="_blank"
+        >
+          Sorting Algorithms
+        </a>
+      ),
+    },
+    {
+      id: 10,
+      appearedOnScreen: false,
+      visible: true,
       title: 'Blackjack',
       paragraph:
         'I recreated the popular card game blackjack. Also know as 21.',
       technologies: [
         {
           title: 'Front-end',
-          technologies: ['HTML', 'Tailwindcss', 'Javascript'],
+          technologies: ['HTML', 'CSS', 'Javascript'],
         },
       ],
       footnote: 'Website:',
@@ -297,6 +320,7 @@ function Projects() {
   const project6Ref = useRef<HTMLDivElement>(null);
   const project7Ref = useRef<HTMLDivElement>(null);
   const project8Ref = useRef<HTMLDivElement>(null);
+  const project9Ref = useRef<HTMLDivElement>(null);
 
   // Observer for projects to show fade in animation on screen appear
   useEffect(() => {
@@ -327,6 +351,7 @@ function Projects() {
       project6Ref,
       project7Ref,
       project8Ref,
+      project9Ref,
     ];
 
     projectRefs.forEach((ref, index) => {
@@ -482,7 +507,7 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row mt-8">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[1].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="AxxesConferenceTool_jxi8d4.png"
+                link="AxxesMockup_elfpuu.png"
                 alt="Portfolio Mockup"
                 divClass="w-full"
               />
@@ -579,8 +604,8 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="Sportcomplex_jsazvu.png"
-                alt="blackjack"
+                link="SportComplexMockup_ycwnid.png"
+                alt="Sportcomplex Mockup"
                 divClass="w-full"
               />
             </div>
@@ -648,8 +673,8 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row-reverse">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="BlackJack_iyxgmg.png"
-                alt="blackjack"
+                link="SortingAlgorithms_iyu2mn.png"
+                alt="Sorting Algorithms"
                 divClass="w-full"
               />
             </div>
@@ -660,6 +685,28 @@ function Projects() {
                 technologies={projects[8].technologies}
                 footnote={projects[8].footnote}
                 footnoteLink={projects[8].footnoteLink}
+              />
+            </div>
+          </div>
+        )}
+        {projects[9].visible && (
+          <div
+            ref={project8Ref}
+            className="flex flex-col md:gap-8 md:flex-row">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <CloudinaryImage
+                link="BlackJackMockup_m9cuit.png"
+                alt="blackjack"
+                divClass="w-full"
+              />
+            </div>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <ProjectInfo
+                title={projects[9].title}
+                paragraph={projects[9].paragraph}
+                technologies={projects[9].technologies}
+                footnote={projects[9].footnote}
+                footnoteLink={projects[9].footnoteLink}
               />
             </div>
           </div>
