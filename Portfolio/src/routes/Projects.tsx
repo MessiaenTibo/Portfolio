@@ -25,6 +25,12 @@ function Projects() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchQuerys, setSearchQuerys] = useState<String[]>([]);
 
+  const [showControlsVideo1, setShowControlsVideo1] = useState(false);
+  const [showControlsVideo2, setShowControlsVideo2] = useState(false);
+  const [showControlsVideo3, setShowControlsVideo3] = useState(false);
+  const [showControlsVideo4, setShowControlsVideo4] = useState(false);
+  const [showControlsVideo5, setShowControlsVideo5] = useState(false);
+
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -553,18 +559,28 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`flex w-full pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <video
+                onMouseEnter={() => setShowControlsVideo1(true)}
+                onMouseLeave={() => setShowControlsVideo1(false)}
                 title="1VS1"
                 className="xl:w-1/2 p-2"
                 src={TeamProject1vs1Demo}
-                controls
+                controls={showControlsVideo1}
+                autoPlay
+                muted
+                loop
               >
                 Your browser does not support the video tag.
               </video>
               <video
                 title="1VS1"
                 className="hidden xl:flex w-1/2 p-2"
+                onMouseEnter={() => setShowControlsVideo2(true)}
+                onMouseLeave={() => setShowControlsVideo2(false)}
                 src={TeamProjectShuttleRunDemo}
-                controls
+                controls={showControlsVideo2}
+                autoPlay
+                muted
+                loop
               >
                 Your browser does not support the video tag.
               </video>
@@ -583,7 +599,14 @@ function Projects() {
             ref={project4Ref}
             className="flex flex-col md:flex-row-reverse md:gap-8">
             <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
-              <video title="Shower monitor" src={ProjectOneDemo} controls>
+              <video title="Shower monitor"
+                src={ProjectOneDemo}
+                onMouseEnter={() => setShowControlsVideo3(true)}
+                onMouseLeave={() => setShowControlsVideo3(false)}
+                controls={showControlsVideo3}
+                autoPlay
+                muted
+                loop>
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -629,7 +652,12 @@ function Projects() {
                 title="1VS1"
                 className="xl:w-1/2 p-2"
                 src={LedMatrixDemo}
-                controls
+                onMouseEnter={() => setShowControlsVideo4(true)}
+                onMouseLeave={() => setShowControlsVideo4(false)}
+                autoPlay
+                muted
+                loop
+                controls={showControlsVideo4}
               >
                 Your browser does not support the video tag.
               </video>
@@ -650,7 +678,15 @@ function Projects() {
             ref={project7Ref}
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
-              <video title="Shower monitor" src={EyeTrackingDemo} controls>
+              <video
+                onMouseEnter={() => setShowControlsVideo5(true)}
+                onMouseLeave={() => setShowControlsVideo5(false)}
+                style={{ width: '600px', height: 'auto', overflow: 'hidden' }}
+                title="Shower monitor" src={EyeTrackingDemo}
+                autoPlay
+                muted
+                loop
+                controls={showControlsVideo5}>
                 Your browser does not support the video tag.
               </video>
             </div>
