@@ -26,8 +26,16 @@ const backgroundColorsForEachTechnologie = [
         color: '#e7a328'
     },
     {
+        tech: 'Typescript',
+        color: '#3179c6'
+    },
+    {
         tech: 'Tailwindcss',
         color: '#0c73b8'
+    },
+    {
+        tech: 'Vue',
+        color: '#00c181'
     },
     {
         tech: 'React',
@@ -36,6 +44,14 @@ const backgroundColorsForEachTechnologie = [
     {
         tech: 'ReactNative',
         color: '#23272f'
+    },
+    {
+        tech: 'Expo',
+        color: '#000020'
+    },
+    {
+        tech: 'Vite',
+        color: '#fec723'
     },
     {
         tech: 'C#',
@@ -80,6 +96,26 @@ const backgroundColorsForEachTechnologie = [
     {
         tech: 'NodeJS',
         color: '#8ac500'
+    },
+    {
+        tech: 'Docker',
+        color: '#2497ed'
+    },
+    {
+        tech: 'Jest',
+        color: '#853957'
+    },
+    {
+        tech: 'Mediapipe(Facelandmarker)',
+        color: '#0098a6'
+    },
+    {
+        tech: 'Bluetooth',
+        color: '#0191e4'
+    },
+    {
+        tech: 'WindowsFormsApp(.NETFramework)',
+        color: '#512bd4'
     }
 ]
 
