@@ -9,6 +9,7 @@ interface Props {
     footnoteLink?: ReactElement<HTMLAttributeAnchorTarget>;
     footnoteTwo?: string;
     footnoteLinkTwo?: ReactElement<HTMLAttributeAnchorTarget>;
+    handleTechClick?: (tech: string) => void; // Callback function for technology click event
 }
 
 
@@ -119,7 +120,7 @@ const backgroundColorsForEachTechnologie = [
     }
 ]
 
-export default ({ title, paragraph, technologies, footnote, footnoteLink, footnoteTwo, footnoteLinkTwo }: Props) => {
+export default ({ title, paragraph, technologies, footnote, footnoteLink, footnoteTwo, footnoteLinkTwo, handleTechClick }: Props) => {
     const getBackgroundByTech = (tech: string) => {
         const backgroundColor = backgroundColorsForEachTechnologie.find(e => e.tech.toLowerCase().split(' ').join('') === tech.toLocaleLowerCase().split(' ').join(''));
         return backgroundColor ? backgroundColor.color : null; // Return null if no specific color is found
@@ -145,6 +146,7 @@ export default ({ title, paragraph, technologies, footnote, footnoteLink, footno
                                                 style={backgroundColor ? { backgroundColor } : {}}
                                                 className={`${backgroundColor ? '' : ' bg-caribbean-current dark:bg-caribbean-current-dark'} text-white font-medium py-0.5 px-2`} // Default Background color (if no match)
                                                 key={index}
+                                                onClick={() => handleTechClick?.(tech)} // Trigger the callback on click
                                             >
                                                 {tech}
                                             </li>

@@ -406,6 +406,11 @@ function Projects() {
     );
   }, [searchQuerys]);
 
+  const handleTechClick = (tech: string) => {
+    setSearchQuerys([...searchQuerys, tech]);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const renderFilters = () => {
     return (
       <div className="flex flex-wrap gap-4">
@@ -503,6 +508,7 @@ function Projects() {
                 footnoteLink={projects[0].footnoteLink}
                 footnoteTwo={projects[0].footnoteTwo}
                 footnoteLinkTwo={projects[0].footnoteLinkTwo}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -527,6 +533,7 @@ function Projects() {
                 footnoteLink={projects[1].footnoteLink}
                 footnoteTwo={projects[1].footnoteTwo}
                 footnoteLinkTwo={projects[1].footnoteLinkTwo}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -549,6 +556,7 @@ function Projects() {
                 technologies={projects[2].technologies}
                 footnote={projects[2].footnote}
                 footnoteLink={projects[2].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -590,6 +598,7 @@ function Projects() {
                 title={projects[3].title}
                 paragraph={projects[3].paragraph}
                 technologies={projects[3].technologies}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -617,6 +626,7 @@ function Projects() {
                 technologies={projects[4].technologies}
                 footnote={projects[4].footnote}
                 footnoteLink={projects[4].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -639,6 +649,7 @@ function Projects() {
                 technologies={projects[5].technologies}
                 footnote={projects[5].footnote}
                 footnoteLink={projects[5].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -669,6 +680,7 @@ function Projects() {
                 technologies={projects[6].technologies}
                 footnote={projects[6].footnote}
                 footnoteLink={projects[6].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -699,6 +711,7 @@ function Projects() {
                 footnoteLink={projects[7].footnoteLink}
                 footnoteTwo={projects[7].footnoteTwo}
                 footnoteLinkTwo={projects[7].footnoteLinkTwo}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -721,6 +734,7 @@ function Projects() {
                 technologies={projects[8].technologies}
                 footnote={projects[8].footnote}
                 footnoteLink={projects[8].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
@@ -743,6 +757,7 @@ function Projects() {
                 technologies={projects[9].technologies}
                 footnote={projects[9].footnote}
                 footnoteLink={projects[9].footnoteLink}
+                handleTechClick={handleTechClick}
               />
             </div>
           </div>
