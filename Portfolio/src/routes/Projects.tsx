@@ -411,8 +411,8 @@ function Projects() {
   }, [searchQuerys]);
 
   const handleTechClick = (tech: string) => {
+    window.scrollTo({ top: 0 });
     setSearchQuerys([...searchQuerys, tech]);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const renderFilters = () => {
