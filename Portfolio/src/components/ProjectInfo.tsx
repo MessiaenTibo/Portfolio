@@ -176,7 +176,7 @@ export default ({ title, paragraph, technologies, footnote, footnoteLink, footno
                                         return (
                                             <li
                                                 style={backgroundColor ? { backgroundColor } : {}}
-                                                className={`${backgroundColor ? '' : ' bg-caribbean-current dark:bg-caribbean-current-dark'} text-white font-medium py-0.5 px-2 hover:scale-105 duration-100 `} // Default Background color (if no match)
+                                                className={`${backgroundColor ? '' : ' bg-caribbean-current dark:bg-caribbean-current-dark'} text-white font-medium py-0.5 px-2 rounded-sm hover:scale-105 duration-100 `} // Default Background color (if no match)
                                                 key={index}
                                                 onClick={() => handleTechClick?.(tech)} // Trigger the callback on click
                                             >
