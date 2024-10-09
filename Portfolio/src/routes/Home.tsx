@@ -1,4 +1,4 @@
-import { FileDown, Github, Send, Linkedin, Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
+import { Download, Github, Send, Linkedin, Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
 
 import profileIcon from '../assets/imgs/profileIcon.png'
 import cv from '../assets/pdfs/Curriculum_vitae.pdf'
@@ -22,9 +22,17 @@ function Home() {
         Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I have a Bachelor's degree in Multimedia and Creative Technologies. I am a hardworking individual and always eager to learn new things.
       </p>
 
-      <a href={cv} target="_blank" className='flex place-items-center place-content-center bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 hover:text-orange-peel dark:hover:text-orange-peel-dark'>
-        <FileDown className=' FileDown text-2xl m-4' />
-        <p className='m-4 ml-0'>DOWNLOAD MY CV</p></a>
+      <a href={cv} target="_blank" className='flex overflow-visible place-items-center place-content-center gap-2 px-5 py-2 bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
+        <p className=''>Resume</p>
+        {/* <Download className='' /> */}
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-download overflow-visible">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <g className=' motion-safe:group-hover/Resume:animate-custom-bounce'>
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" x2="12" y1="15" y2="3" />
+          </g>
+        </svg>
+      </a>
 
       <div className='xl:flex xl:mx-24 motion-safe:animate-fade-in-from-bottom'>
         <div className='w-full bg-caribbean-current dark:bg-caribbean-current-dark text-center max-w-md m-auto xl:inline-block xl:h-[45.85rem] xl:mt-0 xl:mr-6'>

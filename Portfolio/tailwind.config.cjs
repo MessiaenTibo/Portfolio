@@ -1,3 +1,5 @@
+const { transform } = require('typescript');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -137,6 +139,20 @@ module.exports = {
           '80%': { opacity: '0.8', transform: 'translateY(0)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'custom-bounce': {
+          '0%': {
+            transform: 'translateY(0)',
+            animation: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': {
+            transform: 'translateY(-25%)',
+            animation: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            animation: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 10s linear infinite',
@@ -160,6 +176,7 @@ module.exports = {
         'fade-in-from-left-4': 'fade-in-from-left 1.25s ease-out',
         'fade-in-from-right': 'fade-in-from-right 0.75s ease-out',
         'fade-in-from-bottom': 'fade-in-from-bottom 1s ease-out',
+        'custom-bounce': 'custom-bounce 1s infinite',
       },
     },
   },
