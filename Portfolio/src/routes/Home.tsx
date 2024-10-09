@@ -25,7 +25,7 @@ function Home() {
       <a href={cv} target="_blank" className='flex overflow-visible place-items-center place-content-center gap-2 px-5 py-2 bg-caribbean-current dark:bg-caribbean-current-dark w-fit m-auto text-white rounded mb-16 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
         <p className=''>Resume</p>
         {/* <Download className='' /> */}
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-download overflow-visible">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download overflow-visible">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
           <g className=' motion-safe:group-hover/Resume:animate-custom-bounce'>
             <polyline points="7 10 12 15 17 10" />
