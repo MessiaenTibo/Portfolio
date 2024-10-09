@@ -168,7 +168,7 @@ export default ({ title, paragraph, technologies, footnote, footnoteLink, footno
                     {technologies.map((technology, index) => {
                         return (
                             <div key={index} className='flex flex-col px-6'>
-                                <h3 className='pt-4'>{technology.title}:</h3>
+                                <p className='pt-4'>{technology.title}:</p>
                                 <ul className='flex flex-wrap gap-3 cursor-pointer'>
                                     {technology.technologies.map((tech, index) => {
                                         let backgroundColor = getBackgroundByTech(tech); // Get background color by tech
