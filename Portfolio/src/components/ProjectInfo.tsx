@@ -117,6 +117,38 @@ const backgroundColorsForEachTechnologie = [
     {
         tech: 'WindowsFormsApp(.NETFramework)',
         color: '#512bd4'
+    },
+    {
+        tech: 'Clarity',
+        color: '#3b72d9'
+    },
+    {
+        tech: 'Intercom',
+        color: '#081c34'
+    },
+    {
+        tech: 'Mixpanel',
+        color: '#7856ff'
+    },
+    {
+        tech: 'Rollbar',
+        color: '#343f55'
+    },
+    {
+        tech: 'Cloudinary',
+        color: '#3447c5'
+    },
+    {
+        tech: 'Netlify',
+        color: '#05bdba'
+    },
+    {
+        tech: 'Formspree',
+        color: '#cc0e27'
+    },
+    {
+        tech: 'Chart.js',
+        color: '#ff6385'
     }
 ]
 
@@ -144,7 +176,7 @@ export default ({ title, paragraph, technologies, footnote, footnoteLink, footno
                                         return (
                                             <li
                                                 style={backgroundColor ? { backgroundColor } : {}}
-                                                className={`${backgroundColor ? '' : ' bg-caribbean-current dark:bg-caribbean-current-dark'} text-white font-medium py-0.5 px-2`} // Default Background color (if no match)
+                                                className={`${backgroundColor ? '' : ' bg-caribbean-current dark:bg-caribbean-current-dark'} text-white font-medium py-0.5 px-2 hover:scale-105 duration-100 `} // Default Background color (if no match)
                                                 key={index}
                                                 onClick={() => handleTechClick?.(tech)} // Trigger the callback on click
                                             >

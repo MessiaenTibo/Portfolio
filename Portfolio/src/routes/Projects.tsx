@@ -281,6 +281,10 @@ function Projects() {
           title: 'Front-end',
           technologies: ['HTML', 'Tailwindcss', 'Javascript'],
         },
+        {
+          title: 'Other',
+          technologies: ['Netlify'],
+        },
       ],
       footnote: 'Website:',
       footnoteLink: (
