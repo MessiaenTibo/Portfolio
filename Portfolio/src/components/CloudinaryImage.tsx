@@ -34,17 +34,17 @@ export default ({
   myImage.format('webp');
   myImage.delivery(Delivery.quality('auto'));
   return (
-    <div className={` ${divClass} `}>
-        <AdvancedImage
+    <div className={` ${divClass} shadow-md `}>
+      <AdvancedImage
         alt={alt}
         className={`w-full ${imgClass}`}
-          cldImg={myImage}
-          plugins={[
-            responsive({
-              steps: [250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
-            }),
-          ]}
-        />
+        cldImg={myImage}
+        plugins={[
+          responsive({
+            steps: [250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900]
+          }),
+        ]}
+      />
     </div>
   );
 };

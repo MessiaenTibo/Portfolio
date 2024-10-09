@@ -569,12 +569,12 @@ function Projects() {
           <div
             ref={project3Ref}
             className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`flex w-full pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+            <div className={`flex w-full gap-4 pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <video
                 onMouseEnter={() => setShowControlsVideo1(true)}
                 onMouseLeave={() => setShowControlsVideo1(false)}
                 title="1VS1"
-                className="xl:w-1/2 p-2"
+                className="xl:w-1/2 shadow-md"
                 src={TeamProject1vs1Demo}
                 controls={showControlsVideo1}
                 autoPlay
@@ -585,7 +585,7 @@ function Projects() {
               </video>
               <video
                 title="1VS1"
-                className="hidden xl:flex w-1/2 p-2"
+                className="hidden xl:flex w-1/2  shadow-md"
                 onMouseEnter={() => setShowControlsVideo2(true)}
                 onMouseLeave={() => setShowControlsVideo2(false)}
                 src={TeamProjectShuttleRunDemo}
@@ -613,6 +613,7 @@ function Projects() {
             className="flex flex-col md:flex-row-reverse md:gap-8">
             <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video title="Shower monitor"
+                className='shadow-md'
                 src={ProjectOneDemo}
                 onMouseEnter={() => setShowControlsVideo3(true)}
                 onMouseLeave={() => setShowControlsVideo3(false)}
@@ -665,7 +666,7 @@ function Projects() {
             <div className={`flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video
                 title="1VS1"
-                className="xl:w-1/2 p-2"
+                className="xl:w-1/2 shadow-md"
                 src={LedMatrixDemo}
                 onMouseEnter={() => setShowControlsVideo4(true)}
                 onMouseLeave={() => setShowControlsVideo4(false)}
@@ -695,6 +696,7 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <video
+                className='shadow-md'
                 onMouseEnter={() => setShowControlsVideo5(true)}
                 onMouseLeave={() => setShowControlsVideo5(false)}
                 style={{ width: '600px', height: 'auto', overflow: 'hidden' }}
