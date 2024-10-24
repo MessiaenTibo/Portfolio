@@ -145,6 +145,12 @@ function Projects() {
           technologies: ['Adobe XD', 'Photoshop', 'FreePik']
         },
       ],
+      footnote: 'Website:',
+      footnoteLink: (
+        <a href="https://messiaentibo.github.io/Team-Project/" target="_blank">
+          Team Project
+        </a>
+      ),
     },
     {
       id: 5,
@@ -603,6 +609,8 @@ function Projects() {
                 paragraph={projects[3].paragraph}
                 technologies={projects[3].technologies}
                 handleTechClick={handleTechClick}
+                footnote={projects[3].footnote}
+                footnoteLink={projects[3].footnoteLink}
               />
             </div>
           </div>
