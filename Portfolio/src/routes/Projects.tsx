@@ -306,6 +306,29 @@ function Projects() {
       id: 10,
       appearedOnScreen: false,
       visible: true,
+      title: 'Woordle',
+      paragraph:
+        'I recreated the popular game woordle (in dutch). It is a game where you have to guesse what the word is. Yellow means right letter in the wrong place. Green means right letter in the right place.',
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['HTML', 'CSS', 'Javascript'],
+        },
+      ],
+      footnote: 'Website:',
+      footnoteLink: (
+        <a
+          href="https://messiaentibo.github.io/Woordle/"
+          target="_blank"
+        >
+          Woordle
+        </a>
+      ),
+    },
+    {
+      id: 11,
+      appearedOnScreen: false,
+      visible: true,
       title: 'Blackjack',
       paragraph:
         'I recreated the popular card game blackjack. Also know as 21.',
@@ -337,6 +360,7 @@ function Projects() {
   const project7Ref = useRef<HTMLDivElement>(null);
   const project8Ref = useRef<HTMLDivElement>(null);
   const project9Ref = useRef<HTMLDivElement>(null);
+  const project10Ref = useRef<HTMLDivElement>(null);
 
   // Observer for projects to show fade in animation on screen appear
   useEffect(() => {
@@ -368,6 +392,7 @@ function Projects() {
       project7Ref,
       project8Ref,
       project9Ref,
+      project10Ref,
     ];
 
     projectRefs.forEach((ref, index) => {
@@ -755,22 +780,45 @@ function Projects() {
         )}
         {projects[9].visible && (
           <div
-            ref={project8Ref}
+            ref={project9Ref}
             className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[9].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="BlackJackMockup_m9cuit.png"
-                alt="blackjack"
+                link="WoorldeMockup_aadhtz.png"
+                alt="woordle"
                 divClass="w-full"
               />
             </div>
-            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[9].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[9].title}
                 paragraph={projects[9].paragraph}
                 technologies={projects[9].technologies}
                 footnote={projects[9].footnote}
                 footnoteLink={projects[9].footnoteLink}
+                handleTechClick={handleTechClick}
+              />
+            </div>
+          </div>
+        )}
+        {projects[10].visible && (
+          <div
+            ref={project10Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[10].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <CloudinaryImage
+                link="BlackJackMockup_m9cuit.png"
+                alt="blackjack"
+                divClass="w-full"
+              />
+            </div>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[10].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <ProjectInfo
+                title={projects[10].title}
+                paragraph={projects[10].paragraph}
+                technologies={projects[10].technologies}
+                footnote={projects[10].footnote}
+                footnoteLink={projects[10].footnoteLink}
                 handleTechClick={handleTechClick}
               />
             </div>
