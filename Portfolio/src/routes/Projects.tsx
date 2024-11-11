@@ -318,7 +318,7 @@ function Projects() {
       footnote: 'Website:',
       footnoteLink: (
         <a
-          href="https://messiaentibo.github.io/Woordle/"
+          href="https://nederlandse-woordle.netlify.app"
           target="_blank"
         >
           Woordle
