@@ -364,22 +364,23 @@ function Projects() {
 
   // Observer for projects to show fade in animation on screen appear
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = Number(entry.target.getAttribute('data-id'));
-          setProjects((prevProjects) =>
-            prevProjects.map((project) =>
-              project.id === id
-                ? { ...project, appearedOnScreen: true }
-                : project
-            )
-          );
-        }
-      });
-    }, {
-      threshold: 0.2 // Trigger when 20% of the element is visible
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = Number(entry.target.getAttribute('data-id'));
+            setProjects((prevProjects) =>
+              prevProjects.map((project) =>
+                project.id === id
+                  ? { ...project, appearedOnScreen: true }
+                  : project
+              )
+            );
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
 
     const projectRefs = [
       project0Ref,
@@ -395,17 +396,18 @@ function Projects() {
       project10Ref,
     ];
 
+    // Observe only the visible projects
     projectRefs.forEach((ref, index) => {
-      if (ref.current) {
+      if (ref.current && projects[index].visible) {
         ref.current.setAttribute('data-id', (index + 1).toString());
         observer.observe(ref.current);
       }
     });
 
     return () => {
-      observer.disconnect();
+      observer.disconnect(); // Clean up
     };
-  }, []);
+  }, [projects]); // Re-run effect when projects array changes
 
   useEffect(() => {
     // Check if there are no search queries
@@ -421,24 +423,20 @@ function Projects() {
     // Check projects if 1 or more of the search queries are in the title, paragraph or technologies
     setProjects(
       projects.map((project) => {
-        if (
-          searchQuerys.some(
-            (query: String) =>
-              project.title.toLowerCase().includes(query.toLowerCase()) ||
-              project.paragraph.toLowerCase().includes(query.toLowerCase()) ||
-              project.technologies.some((tech) =>
-                tech.technologies.some((technology) =>
-                  technology.toLowerCase().includes(query.toLowerCase())
-                )
+        project.visible = searchQuerys.some(
+          (query) =>
+            project.title.toLowerCase().includes(query.toLowerCase()) ||
+            project.paragraph.toLowerCase().includes(query.toLowerCase()) ||
+            project.technologies.some((tech) =>
+              tech.technologies.some((technology) =>
+                technology.toLowerCase().includes(query.toLowerCase())
               )
-          )
-        ) {
-          return { ...project, visible: true };
-        } else {
-          return { ...project, visible: false };
-        }
+            )
+        );
+        return project; // Return the same project object with modified 'visible' property
       })
     );
+
   }, [searchQuerys]);
 
   const handleTechClick = (tech: string) => {
@@ -492,8 +490,16 @@ function Projects() {
             <button
               className="flex justify-center items-center w-max ml-2 rounded-md h-10 px-4 font-bold text-caribbean-current dark:text-caribbean-current-dark"
               onClick={() => {
-                setSearchQuerys([]);
-                setSearchQuery('');
+                // setSearchQuerys([]);
+                // setSearchQuery('');
+                projects.forEach(project => {
+                  const projectObject = {
+                    id: project.id,
+                    visible: project.visible,
+                    appearedOnScreen: project.appearedOnScreen
+                  }
+                  console.log(projectObject);
+                });
               }}
             >
               Clear
