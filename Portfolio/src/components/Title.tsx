@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const TypeAnimation = ({ title, typeAnimation, animationDelay = 120 }: { title: string; typeAnimation?: boolean, animationDelay?:number}) => {
+const TypeAnimation = ({ title, typeAnimation, animationDelay = 120 }: { title: string; typeAnimation?: boolean, animationDelay?: number }) => {
   const [text, setText] = useState('|');
   const [textArray, setTextArray] = useState(title);
 

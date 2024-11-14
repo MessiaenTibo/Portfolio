@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom"
 import "./assets/tailwind.css"
 
 import Home from './routes/Home';
+import HomeTwo from './routes/HomeTwo';
 import About from './routes/About';
 import Learning from './routes/Learning';
 import Projects from './routes/Projects';
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'contact',
-        element: <Contact/>
+        element: <Contact />
       },
       {
         path: 'robots.txt',
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element:<Navigate to="/" replace />
+        element: <Navigate to="/" replace />
       }
     ]
   },
@@ -66,7 +67,7 @@ if ('serviceWorker' in navigator) {
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <div>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
   </React.StrictMode>,
 )
