@@ -490,16 +490,8 @@ function Projects() {
             <button
               className="flex justify-center items-center w-max ml-2 rounded-md h-10 px-4 font-bold text-caribbean-current dark:text-caribbean-current-dark"
               onClick={() => {
-                // setSearchQuerys([]);
-                // setSearchQuery('');
-                projects.forEach(project => {
-                  const projectObject = {
-                    id: project.id,
-                    visible: project.visible,
-                    appearedOnScreen: project.appearedOnScreen
-                  }
-                  console.log(projectObject);
-                });
+                setSearchQuerys([]);
+                setSearchQuery('');
               }}
             >
               Clear
