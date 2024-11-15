@@ -469,7 +469,7 @@ function Projects() {
 
   return (
     <div className="Projects w-full mx-4 md:mx-8 2xl:max-w-screen-2xl 2xl:m-auto">
-      <Title title="Welcome" />
+      <Title title="Welcome" classAtribute='text-center' />
 
       <div className=" flex justify-center items-center m-auto max-w-md">
         <div className=" flex flex-col  w-full justify-end mb-2">

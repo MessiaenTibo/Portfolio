@@ -16,7 +16,7 @@ function HomeOld() {
   return (
     <div className="Home">
 
-      <Title title="Welcome" typeAnimation={true} />
+      <Title title="Welcome" typeAnimation={true} classAtribute='text-center' />
 
       <p className='text-center text-sm px-4 pb-4 max-w-lg m-auto xl:p-0 xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
         Hey, I am Tibo Messiaen, a full stack web & app developer from Belgium. I have a Bachelor's degree in Multimedia and Creative Technologies. I am a hardworking individual and always eager to learn new things.

@@ -15,7 +15,7 @@ function Learning() {
 
   return (
     <div className="Learning">
-      <Title title="My learning adventure" />
+      <Title title="My learning adventure" classAtribute='text-center' />
 
       <div className='max-w-6xl m-auto'>
         <SeperatorLine year="2020" />
