@@ -48,7 +48,7 @@ module.exports = {
         // DarkMode
         dark: '#02020A',
         'anti-flash-white-dark': '#08121A',
-        'orange-peel-dark': '#FFCF2D   ', // '#FFCF2D' OR'#4FFF42' OR '#CC7B00'
+        'orange-peel-dark': '#E5A138   ', // '#FFCF2D' OR'#4FFF42' OR '#CC7B00'
         'caribbean-current-dark': '#cc2233', // '#0E424F' OR '#FF2233'
         'federal-blue-dark': '#04011A',
       },

@@ -5,8 +5,8 @@ import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom"
 
 import "./assets/tailwind.css"
 
+import HomeOld from './routes/HomeOld';
 import Home from './routes/Home';
-import HomeTwo from './routes/HomeTwo';
 import About from './routes/About';
 import Learning from './routes/Learning';
 import Projects from './routes/Projects';

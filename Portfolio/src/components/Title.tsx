@@ -25,7 +25,7 @@ const TypeAnimation = ({ title, typeAnimation, animationDelay = 120 }: { title: 
   }, [title, textArray, typeAnimation]);
 
   return (
-    <h1 className='text-2xl text-center text-caribbean-current dark:text-caribbean-current-dark pt-6 pb-5 font-bold xl:text-3xl xl:pt-8 xl:pb-10 2xl:text-4xl 2xl:pt-10 2xl:pb-12 '>
+    <h1 className='text-2xl text-caribbean-current dark:text-caribbean-current-dark pt-6 pb-5 font-bold xl:text-3xl xl:pt-8 xl:pb-10 2xl:text-4xl 2xl:pt-10 2xl:pb-12 '>
       {text}
     </h1>
   );
