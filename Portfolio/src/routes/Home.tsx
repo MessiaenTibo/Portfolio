@@ -39,7 +39,7 @@ function Home() {
                 <div className='flex gap-2 mb-8'>
                     <a href="/learning" className='flex flex-col justify-center p-2 w-full max-w-[200px] aspect-[3/2] bg-white dark:bg-dark text-center shadow-md hover:bg-orange-peel dark:hover:bg-orange-peel-dark group/experience'>
                         <div className='flex justify-center items-center text-caribbean-current dark:text-caribbean-current-dark font-bold text-4xl group-hover/experience:text-white'>4+</div>
-                        <div className=' font-medium group-hover/experience:text-white'>Years of experience</div>
+                        <div className=' font-medium group-hover/experience:text-white'>Years of programming experience</div>
                     </a>
                     <a href="/projects" className='flex flex-col justify-center p-2 w-full max-w-[200px] aspect-[3/2] bg-white dark:bg-dark text-center shadow-md hover:bg-orange-peel dark:hover:bg-orange-peel-dark group/projects'>
                         <div className='flex justify-center items-center text-caribbean-current dark:text-caribbean-current-dark font-bold text-4xl group-hover/projects:text-white'>11</div>
