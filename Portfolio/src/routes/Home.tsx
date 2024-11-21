@@ -20,8 +20,12 @@ function Home() {
             <div className=''>
                 <Title title="Welcome to my portfolio!" typeAnimation={true} animationDelay={80} />
 
-                <p className='pb-4 text-sm max-w-lg m-auto xl:p-0 xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
+                <p className='pb-2 text-sm max-w-lg m-auto xl:p-0 xl:text-base xl:max-w-xl xl:pb-3 2xl:text-xl 2xl:max-w-2xl 2xl:pb-5'>
                     Hey, I am Tibo Messiaen, a <b>Full Stack Web & App Developer</b> from Belgium. I have a <b>Bachelor's degree in Multimedia and Creative Technologies</b>. I am a hardworking individual and always eager to learn new things.
+                </p>
+
+                <p className='pb-4 text-sm max-w-lg m-auto xl:p-0 xl:text-base xl:max-w-xl xl:pb-6 2xl:text-xl 2xl:max-w-2xl 2xl:pb-8'>
+                    This portfolio website is designed to highlight my skills as a full-stack developer and to provide insights into who I am as an individual. It serves as a platform to showcase the projects I have worked on, the technologies I am proficient in, and the creative solutions I bring to the table.
                 </p>
 
                 <a href={cv} target="_blank" className='flex overflow-visible gap-2 px-5 py-2  bg-caribbean-current dark:bg-caribbean-current-dark w-fit text-white rounded mb-8 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
