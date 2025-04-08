@@ -105,6 +105,25 @@ function Projects() {
       id: 3,
       appearedOnScreen: false,
       visible: true,
+      title: 'ProDrone Solutions',
+      paragraph: `ProDrone Solutions is a fictional drone company created to showcase my frontend skills. The landing page and mini webshop highlight clean UI design, smooth animations, and intuitive UX. Every detail—from layout to interactions—was built to reflect a sleek, modern brand while demonstrating my ability to create engaging, responsive web experiences.`,
+      technologies: [
+        {
+          title: 'Front-end',
+          technologies: ['React', 'HTML', 'Tailwindcss', 'Typescript'],
+        },
+      ],
+      footnote: 'Website:',
+      footnoteLink: (
+        <a href="https://dronesolutions.netlify.app/" target="_blank">
+          Dronesolutions
+        </a>
+      ),
+    },
+    {
+      id: 4,
+      appearedOnScreen: false,
+      visible: true,
       title: 'Portfolio',
       paragraph: 'I created this portfolio website to showcase my projects and skills. The website is built with React and is hosted on Netlify. I also added a darkmode, animations that are hidden when the user prefers reduced motion and a search function to filter the projects. Also all the images are optimized with Cloudinary to get the best website preformance and a almost perfect lighthouse score.',
       technologies: [
@@ -125,7 +144,7 @@ function Projects() {
       ),
     },
     {
-      id: 4,
+      id: 5,
       appearedOnScreen: false,
       visible: true,
       title: 'Team project',
@@ -153,7 +172,7 @@ function Projects() {
       ),
     },
     {
-      id: 5,
+      id: 6,
       appearedOnScreen: false,
       visible: true,
       title: 'Project One',
@@ -174,7 +193,7 @@ function Projects() {
       ),
     },
     {
-      id: 6,
+      id: 7,
       appearedOnScreen: false,
       visible: true,
       title: 'Sportcomplex',
@@ -205,7 +224,7 @@ function Projects() {
       ),
     },
     {
-      id: 7,
+      id: 8,
       appearedOnScreen: false,
       visible: true,
       title: 'Multifunctional LED Matrix',
@@ -236,7 +255,7 @@ function Projects() {
       ),
     },
     {
-      id: 8,
+      id: 9,
       appearedOnScreen: false,
       visible: true,
       title: 'Eye Tracking',
@@ -276,7 +295,7 @@ function Projects() {
       ),
     },
     {
-      id: 9,
+      id: 10,
       appearedOnScreen: false,
       visible: true,
       title: 'Sorting Algorithms',
@@ -303,7 +322,7 @@ function Projects() {
       ),
     },
     {
-      id: 10,
+      id: 11,
       appearedOnScreen: false,
       visible: true,
       title: 'Woordle',
@@ -322,29 +341,6 @@ function Projects() {
           target="_blank"
         >
           Woordle
-        </a>
-      ),
-    },
-    {
-      id: 11,
-      appearedOnScreen: false,
-      visible: true,
-      title: 'Blackjack',
-      paragraph:
-        'I recreated the popular card game blackjack. Also know as 21.',
-      technologies: [
-        {
-          title: 'Front-end',
-          technologies: ['HTML', 'CSS', 'Javascript'],
-        },
-      ],
-      footnote: 'Website:',
-      footnoteLink: (
-        <a
-          href="https://messiaentibo.github.io/Interaction-Design-Eindopdracht/"
-          target="_blank"
-        >
-          Blackjack
         </a>
       ),
     },
@@ -577,8 +573,8 @@ function Projects() {
             className="flex flex-col md:flex-row-reverse md:gap-8">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[2].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="PortfolioMockup_qjs7ns.png"
-                alt="Portfolio Mockup"
+                link="ProDroneSolutionsMockup_gbmdn6"
+                alt="ProDrone Solutions Mockup"
                 divClass="w-full"
               />
             </div>
@@ -597,8 +593,31 @@ function Projects() {
         {projects[3].visible && (
           <div
             ref={project3Ref}
-            className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`flex w-full gap-4 pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+            className="flex flex-col md:flex-row md:gap-8">
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <CloudinaryImage
+                link="PortfolioMockup_qjs7ns.png"
+                alt="Portfolio Mockup"
+                divClass="w-full"
+              />
+            </div>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <ProjectInfo
+                title={projects[3].title}
+                paragraph={projects[3].paragraph}
+                technologies={projects[3].technologies}
+                footnote={projects[3].footnote}
+                footnoteLink={projects[3].footnoteLink}
+                handleTechClick={handleTechClick}
+              />
+            </div>
+          </div>
+        )}
+        {projects[4].visible && (
+          <div
+            ref={project4Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className={`flex w-full gap-4 pb-4 md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video
                 onMouseEnter={() => setShowControlsVideo1(true)}
                 onMouseLeave={() => setShowControlsVideo1(false)}
@@ -626,23 +645,23 @@ function Projects() {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[3].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
-                title={projects[3].title}
-                paragraph={projects[3].paragraph}
-                technologies={projects[3].technologies}
+                title={projects[4].title}
+                paragraph={projects[4].paragraph}
+                technologies={projects[4].technologies}
                 handleTechClick={handleTechClick}
-                footnote={projects[3].footnote}
-                footnoteLink={projects[3].footnoteLink}
+                footnote={projects[4].footnote}
+                footnoteLink={projects[4].footnoteLink}
               />
             </div>
           </div>
         )}
-        {projects[4].visible && (
+        {projects[5].visible && (
           <div
-            ref={project4Ref}
-            className="flex flex-col md:flex-row-reverse md:gap-8">
-            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+            ref={project5Ref}
+            className="flex flex-col md:flex-row md:gap-8">
+            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <video title="Shower monitor"
                 className='shadow-md'
                 src={ProjectOneDemo}
@@ -654,29 +673,6 @@ function Projects() {
                 loop>
                 Your browser does not support the video tag.
               </video>
-            </div>
-            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[4].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
-              <ProjectInfo
-                title={projects[4].title}
-                paragraph={projects[4].paragraph}
-                technologies={projects[4].technologies}
-                footnote={projects[4].footnote}
-                footnoteLink={projects[4].footnoteLink}
-                handleTechClick={handleTechClick}
-              />
-            </div>
-          </div>
-        )}
-        {projects[5].visible && (
-          <div
-            ref={project5Ref}
-            className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
-              <CloudinaryImage
-                link="SportComplexMockup_ycwnid.png"
-                alt="Sportcomplex Mockup"
-                divClass="w-full"
-              />
             </div>
             <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[5].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <ProjectInfo
@@ -694,20 +690,12 @@ function Projects() {
           <div
             ref={project6Ref}
             className="flex flex-col md:gap-8 md:flex-row-reverse">
-            <div className={`flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
-              <video
-                title="1VS1"
-                className="xl:w-1/2 shadow-md"
-                src={LedMatrixDemo}
-                onMouseEnter={() => setShowControlsVideo4(true)}
-                onMouseLeave={() => setShowControlsVideo4(false)}
-                autoPlay
-                muted
-                loop
-                controls={showControlsVideo4}
-              >
-                Your browser does not support the video tag.
-              </video>
+            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <CloudinaryImage
+                link="SportComplexMockup_ycwnid.png"
+                alt="Sportcomplex Mockup"
+                divClass="w-full"
+              />
             </div>
             <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[6].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
@@ -725,7 +713,38 @@ function Projects() {
           <div
             ref={project7Ref}
             className="flex flex-col md:gap-8 md:flex-row">
-            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+            <div className={`flex flex-col gap-8 items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
+              <video
+                title="1VS1"
+                className="xl:w-1/2 shadow-md"
+                src={LedMatrixDemo}
+                onMouseEnter={() => setShowControlsVideo4(true)}
+                onMouseLeave={() => setShowControlsVideo4(false)}
+                autoPlay
+                muted
+                loop
+                controls={showControlsVideo4}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
+              <ProjectInfo
+                title={projects[7].title}
+                paragraph={projects[7].paragraph}
+                technologies={projects[7].technologies}
+                footnote={projects[7].footnote}
+                footnoteLink={projects[7].footnoteLink}
+                handleTechClick={handleTechClick}
+              />
+            </div>
+          </div>
+        )}
+        {projects[8].visible && (
+          <div
+            ref={project8Ref}
+            className="flex flex-col md:gap-8 md:flex-row-reverse">
+            <div className={`w-full pb-4 place-self-center md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <video
                 className='shadow-md'
                 onMouseEnter={() => setShowControlsVideo5(true)}
@@ -739,31 +758,6 @@ function Projects() {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[7].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
-              <ProjectInfo
-                title={projects[7].title}
-                paragraph={projects[7].paragraph}
-                technologies={projects[7].technologies}
-                footnote={projects[7].footnote}
-                footnoteLink={projects[7].footnoteLink}
-                footnoteTwo={projects[7].footnoteTwo}
-                footnoteLinkTwo={projects[7].footnoteLinkTwo}
-                handleTechClick={handleTechClick}
-              />
-            </div>
-          </div>
-        )}
-        {projects[8].visible && (
-          <div
-            ref={project8Ref}
-            className="flex flex-col md:gap-8 md:flex-row-reverse">
-            <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
-              <CloudinaryImage
-                link="SortingAlgorithms_iyu2mn.png"
-                alt="Sorting Algorithms"
-                divClass="w-full"
-              />
-            </div>
             <div className={`w-full pb-12 md:w-1/2 place-self-center xl:p-12 ${projects[8].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <ProjectInfo
                 title={projects[8].title}
@@ -771,6 +765,8 @@ function Projects() {
                 technologies={projects[8].technologies}
                 footnote={projects[8].footnote}
                 footnoteLink={projects[8].footnoteLink}
+                footnoteTwo={projects[8].footnoteTwo}
+                footnoteLinkTwo={projects[8].footnoteLinkTwo}
                 handleTechClick={handleTechClick}
               />
             </div>
@@ -782,8 +778,8 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[9].appearedOnScreen ? 'motion-safe:animate-fade-in-from-left' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="WoorldeMockup_aadhtz.png"
-                alt="woordle"
+                link="SortingAlgorithms_iyu2mn.png"
+                alt="Sorting Algorithms"
                 divClass="w-full"
               />
             </div>
@@ -805,8 +801,8 @@ function Projects() {
             className="flex flex-col md:gap-8 md:flex-row-reverse">
             <div className={`flex items-center w-full pb-4 md:w-1/2 xl:p-12 ${projects[10].appearedOnScreen ? 'motion-safe:animate-fade-in-from-right' : 'opacity-0'}`}>
               <CloudinaryImage
-                link="BlackJackMockup_m9cuit.png"
-                alt="blackjack"
+                link="WoorldeMockup_aadhtz.png"
+                alt="woordle"
                 divClass="w-full"
               />
             </div>
