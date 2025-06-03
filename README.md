@@ -44,3 +44,29 @@ If you just downloaded this repository.
 - It is a **PWA** (Progressive Web App) so you can install it on your device as a desktop application.
 - Made use of **event delegation** to handle events in a more efficient way.
 - **Claudinary** is used to store the images, so they are loaded faster and are optimized for the web and adapted to any screen size.
+
+## Testing
+
+### Cypress (e2e testing)
+
+To run the e2e tests, you need to have Cypress installed. You can install it by running the following command in the terminal:
+
+```shell
+npm install cypress --save-dev
+```
+
+After installing Cypress, you can run the tests by running the following command in the terminal:
+
+```shell
+npx cypress open
+```
+
+This will open the Cypress test runner, where you can run the tests in the `cypress/e2e` folder.
+
+or
+
+```shell
+npm cypress run
+```
+
+This will open the runner in headless mode, which is useful for CI/CD pipelines.

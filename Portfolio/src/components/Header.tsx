@@ -42,7 +42,7 @@ export default ({ title }: Props) => {
   return (
     <header className="flex place-content-between bg-white dark:bg-dark dark:text-white px-4 content-center text-center place-items-center h-12 shadow-header dark:shadow-headerDark xl:h-16 xl:px-6 2xl:px-24">
       <div className='hidden sm:flex '>
-        <Link to='/' onClick={selectHome}><h1 className='text-2xl font-medium xl:text-3xl hover:text-caribbean-current dark:hover:text-caribbean-current-dark'>{title}</h1></Link>
+        <Link data-testid='cypress-nav-home' to='/' onClick={selectHome}><h1 className='text-2xl font-medium xl:text-3xl hover:text-caribbean-current dark:hover:text-caribbean-current-dark'>{title}</h1></Link>
       </div>
       <div className='hidden sm:flex xl:text-xl'>
         <ul className='flex justify-center items-center'>

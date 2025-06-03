@@ -47,7 +47,7 @@ function Contact() {
           onSubmit={handleSubmit}
           className="flex flex-col items-center gap-4 w-full bg-white dark:bg-dark p-4 sm:px-6 sm:border-l-8 border-caribbean-current dark:border-caribbean-current-dark"
         >
-          <h1 className="text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl">Contact</h1>
+          <h1 data-testid="cypress-title" className="text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl">Contact</h1>
           <div className="flex flex-col gap-4 w-full md:flex-row md:motion-safe:animate-fade-in-very-fast">
             <div className=' w-full motion-safe:animate-fade-in-from-top-0'>
               <InputField title="Firstname" id="firstname" type="text" required={true} placeholder="John" maxLenght={20} />

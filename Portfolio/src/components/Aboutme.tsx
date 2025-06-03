@@ -15,11 +15,11 @@ export default () => {
       <div className='flex flex-col lg:flex-row items-center xl-items-start'>
         <div className='lg:w-1/2'>
           <div className=' motion-safe:animate-fade-in-medium'>
-            <h1 className='text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl'>About me</h1>
+            <h1 data-testid="cypress-title" className='text-3xl font-bold mb-6 text-caribbean-current dark:text-caribbean-current-dark 2xl:text-4xl'>About me</h1>
             <h2 className='text-xl font-bold mb-4 2xl:text-2xl'>Hello, I'm Tibo</h2>
-            <p className='mb-6 2xl:text-xl'>I always liked the idea of being able to code my own app's and possible solutions for many problems. I can always program my app's exactly the way I want it to be, and you never have to pay any subscription fees.</p>
-            <p className='mb-6 2xl:text-xl'>These coding skills complement very well with my other hobbies like swimming and darting. I created my own app to keep track of all my played dart games.</p>
-            <p className='mb-6 2xl:text-xl'>I already have a very good application to track my swims and my progression (garmin connect). But still I always have the possibilty to create my own and improved version of it.</p>
+            <p data-testid="cypress-about-description-1" className='mb-6 2xl:text-xl'>I always liked the idea of being able to code my own app's and possible solutions for many problems. I can always program my app's exactly the way I want it to be, and you never have to pay any subscription fees.</p>
+            <p data-testid="cypress-about-description-2" className='mb-6 2xl:text-xl'>These coding skills complement very well with my other hobbies like swimming and darting. I created my own app to keep track of all my played dart games.</p>
+            <p data-testid="cypress-about-description-3" className='mb-6 2xl:text-xl'>I already have a very good application to track my swims and my progression (garmin connect). But still I always have the possibilty to create my own and improved version of it.</p>
           </div>
 
           <div className=''>
