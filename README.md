@@ -35,14 +35,12 @@ If you just downloaded this repository.
    npm run dev
    ```
 
-If you already installed everything before and you just want te run the project.
+## What some features of this project?
 
-1. Open the terminal
-2. Go into the map Portfolio
-   ```shell
-   cd .\Portfolio
-   ```
-3. And run the project
-   ```shell
-   npm run dev
-   ```
+- A **responsive** design, so it looks good on all devices.
+- A **dark mode** toggle, so you can switch between light and dark mode.
+- Some **animations** to make the website more interactive.
+- **lighthouse** score of **100** for performance, accessibility, best practices and SEO.
+- It is a **PWA** (Progressive Web App) so you can install it on your device as a desktop application.
+- Made use of **event delegation** to handle events in a more efficient way.
+- **Claudinary** is used to store the images, so they are loaded faster and are optimized for the web and adapted to any screen size.
