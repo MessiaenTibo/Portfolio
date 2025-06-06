@@ -470,6 +470,7 @@ function Projects() {
       <div className=" flex justify-center items-center m-auto max-w-md">
         <div className=" flex flex-col  w-full justify-end mb-2">
           <input
+            data-testid="search-input"
             className="bg-anti-flash-white h-10 dark:bg-anti-flash-white-dark border border-caribbean-current dark:border-caribbean-current-dark rounded-md px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-caribbean-current dark:focus:ring-caribbean-current-dark"
             type="text"
             placeholder="Filter results: React, HTML, ..."

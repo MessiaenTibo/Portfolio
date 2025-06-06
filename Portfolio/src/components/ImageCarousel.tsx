@@ -63,7 +63,7 @@ export default () => {
     }, [play, current]);
 
     return (
-        <div>
+        <div data-testid="cypress-about-image-carousel">
             <div className='flex flex-col items-center justify-center relative group'>
                 <button
                     onClick={prevImage}

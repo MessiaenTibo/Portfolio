@@ -41,6 +41,7 @@ export default ({ title, subtitle, content, side }: { title: string, subtitle: s
 
     return (
         <div
+            data-testid="cypress-learning-card"
             ref={cardRef}
             className="flex">
 
