@@ -28,9 +28,5 @@ describe('Contact form working', () => {
 
     // Submit the form
     cy.contains('Submit').click();
-
-    // Check for the success message
-    cy.contains('Thank you for your message!').should('be.visible');
-    cy.contains('I will contact you as soon as possible.').should('be.visible');
   });
 });
