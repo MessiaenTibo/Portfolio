@@ -45,7 +45,9 @@ const backgroundColorsForEachTechnologie = [
     { tech: 'Cloudinary', color: '#3447c5' },
     { tech: 'Netlify', color: '#05bdba' },
     { tech: 'Formspree', color: '#cc0e27' },
-    { tech: 'Chart.js', color: '#ff6385' }
+    { tech: 'Chart.js', color: '#ff6385' },
+    { tech: 'Cypress', color: '#007580aa' },
+    { tech: 'Github-workflows', color: '#0b1116' }
 ];
 
 export default ({ title, paragraph, technologies, footnote, footnoteLink, footnoteTwo, footnoteLinkTwo, handleTechClick }: Props) => {

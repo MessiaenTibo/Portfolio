@@ -133,7 +133,7 @@ function Projects() {
         },
         {
           title: 'Other',
-          technologies: ['Cloudinary', 'Netlify', 'Formspree'],
+          technologies: ['Cloudinary', 'Netlify', 'Formspree', 'Cypress', 'Github-workflows'],
         },
       ],
       footnote: 'Website:',
