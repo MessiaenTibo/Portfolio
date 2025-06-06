@@ -18,7 +18,7 @@ describe('All navigation routes', () => {
 
   routes.forEach((fromRoute) => {
     it(`Navigates from ${fromRoute.label} to every other page`, () => {
-      cy.visit(`http://localhost:5173${fromRoute.path}`);
+      cy.visit(`${fromRoute.path}`);
 
       routes.forEach((toRoute) => {
         if (fromRoute.path === toRoute.path) return;
@@ -27,7 +27,7 @@ describe('All navigation routes', () => {
         cy.url().should('include', toRoute.path);
 
         // Return to original page
-        cy.visit(`http://localhost:5173${fromRoute.path}`);
+        cy.visit(`${fromRoute.path}`);
       });
     });
   });

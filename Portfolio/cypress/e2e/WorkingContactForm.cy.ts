@@ -1,8 +1,6 @@
 describe('Contact form working', () => {
-  const contactUrl = 'http://localhost:5173/contact';
-
   it('Check if form gives an error with empty fields', () => {
-    cy.visit(contactUrl);
+    cy.visit('/contact');
 
     // Try submitting the form with empty fields
     cy.contains('Submit').click();
@@ -14,7 +12,7 @@ describe('Contact form working', () => {
   });
 
   it('Submits the form successfully with valid input', () => {
-    cy.visit(contactUrl);
+    cy.visit('/contact');
 
     // Stub the window.confirm dialog to auto-accept
     cy.window().then((win) => {

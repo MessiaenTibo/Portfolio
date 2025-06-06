@@ -1,9 +1,6 @@
-// const baseUrl = 'http://localhost:5173';
-const baseUrl = 'https://tibomessiaen.netlify.app';
-
 describe('Home page complete', () => {
   it('Renders home page elements', () => {
-    cy.visit(`${baseUrl}`);
+    cy.visit('/');
 
     // Title
     cy.get('[data-testid="cypress-title"]')
@@ -54,7 +51,7 @@ describe('Home page complete', () => {
 
 describe('About page complete', () => {
   it('Renderes about page elements', () => {
-    cy.visit(`${baseUrl}/about`);
+    cy.visit('/about');
 
     // Titles
     cy.get('[data-testid="cypress-title-1"]')
@@ -104,7 +101,7 @@ describe('About page complete', () => {
 
 describe('Learing adventure page complete', () => {
   it('Renderes learning adventure page elements', () => {
-    cy.visit(`${baseUrl}/learning`);
+    cy.visit('/learning');
 
     // Title
     cy.get('[data-testid="cypress-title"]')
@@ -131,7 +128,7 @@ describe('Learing adventure page complete', () => {
 
 describe('Projects page complete', () => {
   it('Renderes projects page elements', () => {
-    cy.visit(`${baseUrl}/projects`);
+    cy.visit('/projects');
 
     // Title
     cy.get('[data-testid="cypress-title"]')
@@ -163,7 +160,7 @@ describe('Projects page complete', () => {
 
 describe('Contact page complete', () => {
   it('Renderes contact page elements', () => {
-    cy.visit(`${baseUrl}/contact`);
+    cy.visit('/contact');
 
     // Title
     cy.get('[data-testid="cypress-title"]')
