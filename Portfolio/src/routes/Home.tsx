@@ -1,11 +1,7 @@
-import { Download, Github, Send, Linkedin, Mail, MapPin, Globe, Cake, UserPlus } from 'lucide-react';
+import { Github, Send, Linkedin } from 'lucide-react';
 
-import profileIcon from '../assets/imgs/profileIcon.png'
-import cv from '../assets/pdfs/Curriculum_vitae.pdf'
-import ContactInfo from '../components/ContactInfo';
-import EducationInfo from '../components/EducationInfo';
+// import cv from '../assets/pdfs/Curriculum_vitae.pdf'
 import Title from '../components/Title';
-import { Link } from 'react-router-dom';
 import ProgramerIlustration from '../components/ProgramerIlustration';
 import { useEffect } from 'react';
 
@@ -14,6 +10,13 @@ function Home() {
     useEffect(() => {
         document.title = 'Tibo Messiaen | Home'
     }, [])
+
+    const handleDownload = () => {
+        import('../assets/pdfs/Curriculum_vitae.pdf').then((cv) => {
+            window.open(cv.default, '_blank', 'noopener,noreferrer');
+        });
+    };
+
 
     return (
         <div className="flex flex-col items-center lg:flex-row px-4 lg:w-full max-w-8xl gap-6 lg:gap-16">
@@ -28,7 +31,7 @@ function Home() {
                     This portfolio website is designed to highlight my skills as a full-stack developer and to provide insights into who I am as an individual. It serves as a platform to showcase the projects I have worked on, the technologies I am proficient in, and the creative solutions I bring to the table.
                 </p>
 
-                <a data-testid="cypress-home-download-resume" href={cv} target="_blank" className='flex overflow-visible gap-2 px-5 py-2  bg-caribbean-current dark:bg-caribbean-current-dark w-fit text-white rounded mb-6 3xl:mb-8 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
+                <a data-testid="cypress-home-download-resume" onClick={handleDownload} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer overflow-visible gap-2 px-5 py-2  bg-caribbean-current dark:bg-caribbean-current-dark w-fit text-white rounded mb-6 3xl:mb-8 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
                     <p className=''>Resume</p>
                     {/* <Download className='' /> */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download overflow-visible">
