@@ -31,7 +31,7 @@ function Home() {
                     This portfolio website is designed to highlight my skills as a full-stack developer and to provide insights into who I am as an individual. It serves as a platform to showcase the projects I have worked on, the technologies I am proficient in, and the creative solutions I bring to the table.
                 </p>
 
-                <a data-testid="cypress-home-download-resume" onClick={handleDownload} target="_blank" rel="noopener noreferrer" className='flex cursor-pointer overflow-visible gap-2 px-5 py-2  bg-caribbean-current dark:bg-caribbean-current-dark w-fit text-white rounded mb-6 3xl:mb-8 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
+                <button data-testid="cypress-home-download-resume" onClick={handleDownload} className='flex cursor-pointer overflow-visible gap-2 px-5 py-2  bg-caribbean-current dark:bg-caribbean-current-dark w-fit text-white rounded mb-6 3xl:mb-8 group/Resume hover:text-orange-peel dark:hover:text-orange-peel-dark'>
                     <p className=''>Resume</p>
                     {/* <Download className='' /> */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download overflow-visible">
@@ -41,7 +41,7 @@ function Home() {
                             <line x1="12" x2="12" y1="15" y2="3" />
                         </g>
                     </svg>
-                </a>
+                </button>
 
                 <div className='flex gap-2 mb-6 3xl:mb-8'>
                     <a data-testid="cypress-home-experience-card" href="/learning" className='flex flex-col justify-center p-2 w-full max-w-[200px] aspect-[3/2] bg-white dark:bg-dark text-center shadow-md hover:bg-orange-peel dark:hover:bg-orange-peel-dark group/experience'>
